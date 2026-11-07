@@ -46,10 +46,10 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sylwester na&nbsp;Warmii — cały dom dla&nbsp;14 osób | Agroturystyka&nbsp;Giławy</title>
-  <meta name="description" content="Sylwester w Agroturystyce Giławy na Warmii. Cały dom do 14 osób, salon z kominkiem, duża jadalnia, cisza lasu i jezior. Zarezerwuj termin i wpłać zaliczkę.">
-  <meta property="og:title" content="Sylwester na Warmii — cały dom tylko dla Was">
-  <meta property="og:description" content="Kominek, wspólny stół i noworoczny poranek nad łąką. Do 14 osób, Giławy na Warmii.">
+  <title>Sylwester na&nbsp;Warmii — cały dom na&nbsp;wyłączność do&nbsp;14 osób | Agroturystyka&nbsp;Giławy</title>
+  <meta name="description" content="Sylwester 2026/2027 na Warmii (Giławy, 25 min z Olsztyna). Cały dom na wyłączność do 14 osób: 3 dwupokojowe apartamenty z łazienkami, salon z kominkiem, duża jadalnia, cisza lasu i jezior. Zarezerwuj termin!">
+  <meta property="og:title" content="Sylwester na Warmii — cały dom tylko dla Was (do 14 osób)">
+  <meta property="og:description" content="Trzaskający kominek, wspólny stół w dużej jadalni, 3 apartamenty z łazienkami i zaśnieżony las za oknem. Giławy na Warmii (25 min od Olsztyna).">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gilawy.pl/sylwester.html">
   <meta property="og:image" content="https://gilawy.pl/assets/img/sylwester/hero.webp">
@@ -203,12 +203,25 @@
     .benefit p { color: var(--muted); font-size: .97rem; }
 
     /* gallery */
-    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-    .gallery img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 14px; }
-    .gallery .wide { grid-column: span 2; aspect-ratio: auto; height: 100%; }
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .g-card { position: relative; border-radius: 16px; overflow: hidden; background: var(--night); box-shadow: 0 10px 26px rgba(74,56,38,.12); cursor: zoom-in; margin: 0; }
+    .g-card img { width: 100%; height: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform .35s ease; }
+    .g-card:hover img { transform: scale(1.04); }
+    .g-card.wide { grid-column: span 2; }
+    .g-card.wide img { aspect-ratio: 16/9; }
+    .g-card figcaption { position: absolute; inset: auto 0 0 0; padding: 1.8rem 1rem .75rem; background: linear-gradient(180deg, transparent 0%, rgba(12,18,32,.86) 100%); color: var(--white); font-size: .88rem; font-weight: 600; line-height: 1.35; pointer-events: none; }
+    .story-photos img { cursor: zoom-in; transition: transform .25s ease; }
+    .story-photos img:hover { transform: translateY(-2px); }
+
+    /* lightbox */
+    .lb { position: fixed; inset: 0; z-index: 100; background: rgba(10,15,26,.92); backdrop-filter: blur(6px); display: none; align-items: center; justify-content: center; padding: 24px; }
+    .lb.open { display: flex; }
+    .lb img { max-width: min(1100px, 94vw); max-height: 84vh; border-radius: 14px; box-shadow: 0 20px 60px rgba(0,0,0,.6); object-fit: contain; }
+    .lb-cap { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); color: var(--white); background: rgba(18,26,43,.85); padding: .5rem 1.1rem; border-radius: 999px; font-size: .92rem; text-align: center; max-width: 90vw; }
+    .lb-close { position: fixed; top: 20px; right: 24px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); background: rgba(18,26,43,.8); color: var(--white); font-size: 1.6rem; cursor: pointer; display: grid; place-items: center; line-height: 1; }
 
     /* reviews */
-    .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .reviews { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; }
     .review { background: var(--night-2); border-radius: var(--radius); padding: 1.6rem; border: 1px solid rgba(240,212,154,.14); }
     .review blockquote { font-family: var(--serif); font-size: 1.35rem; line-height: 1.3; margin-bottom: 1rem; color: var(--white); }
     .review footer { font-size: .9rem; color: rgba(255,253,250,.7); }
@@ -278,15 +291,17 @@
     @media (max-width: 980px) {
       .timeline { grid-template-columns: repeat(2, 1fr); }
       .benefits, .reviews { grid-template-columns: 1fr 1fr; }
+      .gallery { grid-template-columns: 1fr 1fr; }
+      .g-card.wide { grid-column: span 2; }
       .story, .offer { grid-template-columns: 1fr; }
     }
     @media (max-width: 680px) {
       section { padding: 64px 0; }
       .top-link { display: none; }
       .top-actions .btn { padding: .5rem .9rem; font-size: .85rem; }
-      .timeline, .benefits, .reviews, .steps, .contact-cards { grid-template-columns: 1fr; }
-      .gallery { grid-template-columns: 1fr 1fr; }
-      .gallery .wide { grid-column: span 2; aspect-ratio: 16/10; }
+      .timeline, .benefits, .reviews, .steps, .contact-cards, .gallery { grid-template-columns: 1fr; }
+      .g-card.wide { grid-column: span 1; }
+      .g-card.wide img { aspect-ratio: 4/3; }
       .offer-card { padding: 2rem 1.4rem; }
       .offer-card .ribbon { left: 1.4rem; }
       .cd-box { min-width: 64px; }
@@ -321,6 +336,7 @@
     <div class="container">
       <a class="brand" href="index.html">Agroturystyka&nbsp;Giławy<small>Sylwester · Warmia</small></a>
       <div class="top-actions">
+        <a class="top-link" href="#galeria">Zdjęcia</a>
         <a class="top-link" href="tel:+48512720750">+48 512 720 750</a>
         <a class="btn btn-gold" href="#rezerwacja">Zarezerwuj</a>
       </div>
@@ -332,9 +348,9 @@
     <section class="hero" id="start">
       <div class="container">
         <div class="hero-inner">
-          <span class="badge"><svg class="icon"><use href="#i-moon"/></svg> Sylwester 2026/2027 · Warmia</span>
+          <span class="badge"><svg class="icon"><use href="#i-moon"/></svg> Sylwester 2026/2027 · Warmia · 25 min od Olsztyna</span>
           <h1>Sylwester w&nbsp;domu, który <em>będzie tylko Wasz</em></h1>
-          <p class="lead">Zamiast zatłoczonej sali i&nbsp;kolejki do&nbsp;szatni — trzaskający kominek, jeden długi stół dla&nbsp;całej paczki i&nbsp;noworoczny poranek z&nbsp;widokiem na&nbsp;zaśnieżoną łąkę i&nbsp;las. Cały dom w&nbsp;Agroturystyce&nbsp;Giławy, nawet dla&nbsp;14 osób.</p>
+          <p class="lead">Zamiast zatłoczonej sali i&nbsp;obcych za&nbsp;ścianą — żywy ogień w&nbsp;kominku, wspólna kolacja w&nbsp;dużej jadalni i&nbsp;noworoczny poranek z&nbsp;widokiem na&nbsp;ośnieżony staw, łąki i&nbsp;las. Wynajmijcie cały dom w&nbsp;Agroturystyce&nbsp;Giławy na&nbsp;wyłączność — 3 niezależne apartamenty z&nbsp;łazienkami nawet dla&nbsp;14 osób.</p>
 
           <div class="countdown" id="countdown" aria-label="Odliczanie do Nowego Roku">
             <div class="cd-box"><b id="cd-d">--</b><span>dni</span></div>
@@ -344,14 +360,14 @@
           </div>
 
           <div class="hero-cta">
-            <a class="btn btn-gold btn-lg" href="#rezerwacja"><svg class="icon"><use href="#i-cal"/></svg> Zarezerwuj i&nbsp;opłać zaliczkę</a>
+            <a class="btn btn-gold btn-lg" href="#rezerwacja"><svg class="icon"><use href="#i-cal"/></svg> Zapytaj o&nbsp;termin i&nbsp;cenę</a>
             <a class="btn btn-ghost btn-lg" href="tel:+48512720750"><svg class="icon"><use href="#i-phone"/></svg> Zadzwoń: 512 720 750</a>
           </div>
           <ul class="hero-facts">
-            <li><svg class="icon"><use href="#i-users"/></svg> do&nbsp;14 osób</li>
-            <li><svg class="icon"><use href="#i-fire"/></svg> salon z&nbsp;kominkiem</li>
+            <li><svg class="icon"><use href="#i-users"/></svg> do&nbsp;14 osób (3 apartamenty z&nbsp;łazienkami)</li>
+            <li><svg class="icon"><use href="#i-fire"/></svg> salon z&nbsp;kominkiem + duża jadalnia</li>
             <li><svg class="icon"><use href="#i-star"/></svg> 9,4/10 na&nbsp;Booking.com</li>
-            <li><svg class="icon"><use href="#i-cal"/></svg> min. 2 noce</li>
+            <li><svg class="icon"><use href="#i-pin"/></svg> 25 min z&nbsp;Olsztyna · 2,5h z&nbsp;Warszawy</li>
           </ul>
         </div>
       </div>
@@ -362,15 +378,15 @@
       <div class="container story">
         <div class="story-text">
           <p class="kicker">Dlaczego tutaj</p>
-          <h2>Noc, którą zapamiętacie, a&nbsp;nie&nbsp;przeczekacie</h2>
-          <p>Agroturystyka&nbsp;Giławy leży na&nbsp;ekologicznym gospodarstwie w&nbsp;Giławach na&nbsp;Warmii. Trzy apartamenty, przestronny salon z&nbsp;kominkiem i&nbsp;duża jadalnia tworzą jeden dom — na&nbsp;sylwestrową noc wynajmujecie go w&nbsp;całości, bez&nbsp;obcych za&nbsp;ścianą.</p>
-          <p>Za&nbsp;oknami są tylko łąki, las i&nbsp;ciemne, rozgwieżdżone niebo. Najbliższy sąsiad nie&nbsp;będzie zaglądał przez płot, a&nbsp;muzykę ściszycie dopiero wtedy, gdy&nbsp;sami zechcecie. Rano, po&nbsp;pierwszej kawie w&nbsp;nowym roku, wystarczy wyjść na&nbsp;taras.</p>
-          <p>To&nbsp;dobre miejsce dla&nbsp;kilku zaprzyjaźnionych rodzin, ekipy znajomych albo całej rodziny, która od&nbsp;dawna obiecuje sobie wspólny wyjazd.</p>
+          <h2>Wspólne świętowanie na&nbsp;dole, własny apartament na&nbsp;górze</h2>
+          <p>Agroturystyka&nbsp;Giławy leży na&nbsp;ekologicznym siedlisku w&nbsp;Giławach (gm.&nbsp;Purda) w&nbsp;sercu Warmii — zaledwie 25 minut jazdy od&nbsp;Olsztyna i&nbsp;10 minut od&nbsp;Pasymia. Na&nbsp;Sylwestra oddajemy Wam <strong>cały dom na&nbsp;wyłączność</strong>: 3 dwupokojowe apartamenty (każdy z&nbsp;prywatną łazienką z&nbsp;prysznicem), przestronny salon z&nbsp;kominkiem i&nbsp;dużą jadalnię.</p>
+          <p>Za&nbsp;oknami rozciągają się zaśnieżone łąki, staw, sosnowy las i&nbsp;ciemne niebo pełne gwiazd. Bez&nbsp;miejskiego hałasu i&nbsp;kanonady petard pod&nbsp;blokiem — możecie bawić się we&nbsp;własnym rytmie i&nbsp;zabrać ze&nbsp;sobą czworonoga, który spędzi tę noc w&nbsp;spokoju.</p>
+          <p>To&nbsp;idealny układ dla&nbsp;kilku zaprzyjaźnionych rodzin z&nbsp;dziećmi lub&nbsp;zgranej paczki znajomych: wieczorem wszyscy siedzicie razem przy jednym stole i&nbsp;kominku, a&nbsp;gdy ktoś chce odpocząć — zamyka drzwi własnego apartamentu.</p>
         </div>
         <div class="story-photos">
-          <img class="tall" src="assets/img/foto-04.webp" width="1440" height="1920" alt="Kominek i drewniane schody w domu Agroturystyka Giławy" loading="lazy">
-          <img class="sq" src="assets/img/foto-02.webp" width="1920" height="1440" alt="Salon z sofami i kominkiem" loading="lazy">
-          <img class="sq" src="assets/img/foto-03.webp" width="1920" height="1440" alt="Jadalnia z dużym drewnianym stołem" loading="lazy">
+          <img class="tall" src="assets/img/foto-04.webp" width="1440" height="1920" alt="Kominek opalany drewnem i schody w domu Agroturystyka Giławy" loading="lazy">
+          <img class="sq" src="assets/img/sylwester/zima-plener.webp" width="1024" height="768" alt="Zima w Agroturystyce Giławy — ośnieżony staw, łąki i las" loading="lazy">
+          <img class="sq" src="assets/img/foto-03.webp" width="1920" height="1440" alt="Duża jadalnia z drewnianym stołem i ekspresem do kawy" loading="lazy">
         </div>
       </div>
     </section>
@@ -381,28 +397,28 @@
         <div class="section-head">
           <p class="kicker">Tak może wyglądać Wasz Sylwester</p>
           <h2>Od&nbsp;powitania przy kominku do&nbsp;noworocznego spaceru</h2>
-          <p>Scenariusz piszecie sami — dom daje Wam przestrzeń, ciepło i&nbsp;spokój.</p>
+          <p>Scenariusz piszecie sami — dom daje Wam przestrzeń, ciepło i&nbsp;pełną swobodę.</p>
         </div>
         <ol class="timeline">
           <li>
             <div class="time">31.12</div>
-            <h3>Przyjazd</h3>
-            <p>Parkujecie na&nbsp;terenie gospodarstwa, rozpakowujecie się w&nbsp;apartamentach i&nbsp;rozpalacie kominek.</p>
+            <h3>Przyjazd i&nbsp;ogień</h3>
+            <p>Parkujecie bezpośrednio przy domu, rozpakowujecie się w&nbsp;trzech apartamentach i&nbsp;rozpalacie drewno w&nbsp;kominku.</p>
           </li>
           <li>
             <div class="time">Wieczór</div>
             <h3>Wspólny stół</h3>
-            <p>Duża jadalnia mieści całą ekipę przy jednym stole. Posiłki można dodatkowo wykupić na&nbsp;miejscu.</p>
+            <p>Duża jadalnia ze&nbsp;świecznikami i&nbsp;ekspresem do&nbsp;kawy mieści całą grupę. Obok macie salon z&nbsp;sofami i&nbsp;dużym telewizorem.</p>
           </li>
           <li>
             <div class="time">00:00</div>
             <h3>Toast pod&nbsp;gwiazdami</h3>
-            <p>Bez&nbsp;miejskiej łuny niebo nad&nbsp;Warmią jest naprawdę ciemne. Wychodzicie przed dom, wznosicie toast i&nbsp;witacie Nowy Rok.</p>
+            <p>Wychodzicie na&nbsp;zadaszony taras lub&nbsp;do&nbsp;ogrodu, wznosicie toast pod&nbsp;rozgwieżdżonym warmińskim niebem i&nbsp;witacie Nowy Rok.</p>
           </li>
           <li>
             <div class="time">1.01</div>
-            <h3>Poranek bez&nbsp;pośpiechu</h3>
-            <p>Leniwe śniadanie, spacer po&nbsp;łące i&nbsp;do&nbsp;lasu, a&nbsp;wieczorem jeszcze raz ogień w&nbsp;kominku.</p>
+            <h3>Noworoczny poranek</h3>
+            <p>Długie śniadanie (można wykupić u&nbsp;gospodarzy!), zimowy spacer nad&nbsp;jezioro Serwent i&nbsp;popołudnie przy kominku.</p>
           </li>
         </ol>
       </div>
@@ -414,38 +430,38 @@
         <div class="section-head">
           <p class="kicker">Co&nbsp;dostajecie</p>
           <h2>Cały dom na&nbsp;wyłączność</h2>
-          <p>Wszystkie trzy apartamenty i&nbsp;części wspólne tylko dla&nbsp;Waszej grupy.</p>
+          <p>Wszystkie trzy apartamenty, salon, jadalnia i&nbsp;ogród tylko dla&nbsp;Waszej grupy — bez&nbsp;innych gości w&nbsp;obiekcie.</p>
         </div>
         <div class="benefits">
           <div class="benefit">
             <div class="ico"><svg class="icon"><use href="#i-users"/></svg></div>
-            <h3>Miejsce nawet dla&nbsp;14 osób</h3>
-            <p>Trzy apartamenty z&nbsp;prywatnymi łazienkami — każda rodzina albo para ma swój kąt na&nbsp;sen.</p>
+            <h3>3 apartamenty (do&nbsp;14 osób)</h3>
+            <p>Każdy apartament ma 2 pokoje i&nbsp;własną łazienkę z&nbsp;prysznicem — pełen komfort i&nbsp;prywatność dla&nbsp;3 rodzin lub&nbsp;par.</p>
           </div>
           <div class="benefit">
             <div class="ico"><svg class="icon"><use href="#i-fire"/></svg></div>
-            <h3>Salon z&nbsp;kominkiem</h3>
-            <p>Miękkie sofy i&nbsp;żywy ogień — serce sylwestrowego wieczoru i&nbsp;noworocznego popołudnia.</p>
+            <h3>Salon z&nbsp;kominkiem i&nbsp;TV</h3>
+            <p>Prawdziwy kominek opalany drewnem, wygodne kanapy, duży telewizor i&nbsp;szybkie Wi-Fi w&nbsp;całym domu.</p>
           </div>
           <div class="benefit">
             <div class="ico"><svg class="icon"><use href="#i-table"/></svg></div>
-            <h3>Duża jadalnia</h3>
-            <p>Jeden stół dla&nbsp;wszystkich, bez&nbsp;dostawiania krzeseł z&nbsp;każdego pokoju.</p>
+            <h3>Duża jadalnia i&nbsp;taras</h3>
+            <p>Przestronna sala jadalniana na&nbsp;wspólną biesiadę, zadaszony taras oraz miejsce na&nbsp;ognisko i&nbsp;zimowy grill.</p>
           </div>
           <div class="benefit">
             <div class="ico"><svg class="icon"><use href="#i-egg"/></svg></div>
-            <h3>Smaki z&nbsp;gospodarstwa</h3>
-            <p>Domowe jajka od&nbsp;własnych kur i&nbsp;warzywa z&nbsp;ekologicznej uprawy. Posiłki do&nbsp;wykupienia na&nbsp;miejscu.</p>
+            <h3>Domowe jedzenie (10/10)</h3>
+            <p>Możliwość zamówienia domowych posiłków i&nbsp;śniadań z&nbsp;produktów z&nbsp;naszego eko gospodarstwa (własne jajka i&nbsp;warzywa).</p>
           </div>
           <div class="benefit">
             <div class="ico"><svg class="icon"><use href="#i-tree"/></svg></div>
-            <h3>Las i&nbsp;jeziora obok</h3>
-            <p>Łąki, leśne ścieżki i&nbsp;jezioro Serwent ok.&nbsp;2&nbsp;km od&nbsp;domu — na&nbsp;noworoczny spacer jak&nbsp;znalazł.</p>
+            <h3>Las, jeziora i&nbsp;spokój dla&nbsp;psów</h3>
+            <p>Sosnowy las i&nbsp;jezioro Serwent obok domu. Zwierzęta są mile widziane — tu odpoczną od&nbsp;miejskich fajerwerków.</p>
           </div>
           <div class="benefit">
             <div class="ico"><svg class="icon"><use href="#i-car"/></svg></div>
-            <h3>Parking na&nbsp;miejscu</h3>
-            <p>Samochody zostają na&nbsp;terenie gospodarstwa. Nikt nie&nbsp;musi wracać nocą do&nbsp;miasta.</p>
+            <h3>Szybki dojazd i&nbsp;parking</h3>
+            <p>Bezpłatny parking na&nbsp;miejscu. Tylko 25 min z&nbsp;Olsztyna, ok.&nbsp;2,5 godz. z&nbsp;Warszawy (S7) i&nbsp;2 godz. z&nbsp;Trójmiasta.</p>
           </div>
         </div>
       </div>
@@ -455,16 +471,39 @@
     <section id="galeria">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Zajrzyjcie do&nbsp;środka</p>
-          <h2>Tu powitacie Nowy Rok</h2>
+          <p class="kicker">Zajrzyjcie do&nbsp;środka i&nbsp;za&nbsp;okno</p>
+          <h2>Prawdziwe zdjęcia domu i&nbsp;zimy w&nbsp;Giławach</h2>
+          <p>Kliknij wybrane zdjęcie, aby powiększyć.</p>
         </div>
         <div class="gallery">
-          <img class="wide" src="assets/img/foto-02.webp" width="1920" height="1440" alt="Salon z kominkiem" loading="lazy">
-          <img src="assets/img/foto-09.webp" width="476" height="476" alt="Sypialnia z podwójnym łóżkiem" loading="lazy">
-          <img src="assets/img/foto-01.webp" alt="Sypialnia z dwoma łóżkami" loading="lazy">
-          <img src="assets/img/foto-07.webp" alt="Łazienka" loading="lazy">
-          <img src="assets/img/foto-08.webp" width="476" height="476" alt="Widok z okna na łąkę i las" loading="lazy">
-          <img class="wide" src="assets/img/foto-06.webp" width="1920" height="1440" alt="Dom w otoczeniu łąk i lasu" loading="lazy">
+          <figure class="g-card wide">
+            <img src="assets/img/sylwester/zima-plener.webp" width="1024" height="768" alt="Zima w Agroturystyce Giławy — ośnieżony staw, łąki i sosnowy las" loading="lazy">
+            <figcaption>Zima w&nbsp;Giławach — ośnieżony staw, łąki i&nbsp;las tuż przy siedlisku</figcaption>
+          </figure>
+          <figure class="g-card">
+            <img src="assets/img/foto-04.webp" width="1440" height="1920" alt="Kominek opalany drewnem i drewniane schody" loading="lazy">
+            <figcaption>Kominek opalany drewnem — serce zimowych wieczorów</figcaption>
+          </figure>
+          <figure class="g-card">
+            <img src="assets/img/foto-02.webp" width="1920" height="1440" alt="Wspólny salon z wygodnymi sofami, dużym TV i kominkiem" loading="lazy">
+            <figcaption>Przestronny salon z&nbsp;wygodnymi sofami i&nbsp;dużym TV</figcaption>
+          </figure>
+          <figure class="g-card">
+            <img src="assets/img/foto-03.webp" width="1920" height="1440" alt="Duża jadalnia ze stołami, świecznikami i ekspresem do kawy" loading="lazy">
+            <figcaption>Duża jadalnia dla&nbsp;całej grupy z&nbsp;kącikiem kawowym</figcaption>
+          </figure>
+          <figure class="g-card">
+            <img src="assets/img/foto-01.webp" width="1920" height="1440" alt="Przytulna sypialnia w jednym z trzech apartamentów" loading="lazy">
+            <figcaption>Wygodne sypialnie w&nbsp;3 dwupokojowych apartamentach</figcaption>
+          </figure>
+          <figure class="g-card">
+            <img src="assets/img/sylwester/lazienka.webp" width="576" height="768" alt="Prywatna łazienka z kabiną prysznicową i oknem dachowym" loading="lazy">
+            <figcaption>Prywatna łazienka z&nbsp;prysznicem w&nbsp;każdym apartamencie</figcaption>
+          </figure>
+          <figure class="g-card wide">
+            <img src="assets/img/foto-06.webp" width="1920" height="1440" alt="Dom Agroturystyka Giławy w otoczeniu łąk i lasu" loading="lazy">
+            <figcaption>Cały dom z&nbsp;ogrodem i&nbsp;parkingiem wyłącznie do&nbsp;Waszej dyspozycji</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -474,7 +513,7 @@
       <div class="container">
         <div class="section-head">
           <p class="kicker">Goście o&nbsp;nas</p>
-          <h2>Wracają tu dla&nbsp;gospodarzy i&nbsp;ciszy</h2>
+          <h2>Wracają tu dla&nbsp;gospodarzy, jedzenia i&nbsp;ciszy</h2>
         </div>
         <div class="score">
           <b>9,4</b>
@@ -483,18 +522,22 @@
         <div class="reviews">
           <figure class="review">
             <blockquote>„Wszystko ok.&nbsp;Miejsce piękne, gospodarze przemili, super jedzenie.”</blockquote>
-            <footer><b>Maciej</b> · para · 4 noce · 10/10</footer>
+            <footer><b>Maciej</b> · 4 noce · 10/10</footer>
+          </figure>
+          <figure class="review">
+            <blockquote>„Przepyszne śniadanka! Menu dla&nbsp;dzieci! Przepiękna okolica.”</blockquote>
+            <footer><b>Sylwia</b> · rodzina z&nbsp;dziećmi · 5 nocy · 10/10</footer>
           </figure>
           <figure class="review">
             <blockquote>„Okolica, siedlisko, przemili gospodarze.”</blockquote>
-            <footer><b>Anna</b> · rodzina z&nbsp;małymi dziećmi · 3 noce · 10/10</footer>
+            <footer><b>Anna</b> · rodzina z&nbsp;dziećmi · 3 noce · 10/10</footer>
           </figure>
           <figure class="review">
             <blockquote>„Bardzo mili gospodarze. Świetne miejsce.”</blockquote>
             <footer><b>Artur</b> · wyjazd ze&nbsp;znajomymi · 3 noce · 10/10</footer>
           </figure>
         </div>
-        <p class="center" style="margin-top:1.6rem;font-size:.85rem;opacity:.65">Cytaty z&nbsp;opinii gości opublikowanych w&nbsp;serwisie Booking.com.</p>
+        <p class="center" style="margin-top:1.6rem;font-size:.85rem;opacity:.65">Autentyczne cytaty z&nbsp;opinii gości opublikowanych w&nbsp;serwisie Booking.com.</p>
       </div>
     </section>
 
@@ -504,26 +547,26 @@
         <div class="section-head">
           <p class="kicker">Oferta sylwestrowa</p>
           <h2>Jeden termin, jedna grupa</h2>
-          <p>Dom na&nbsp;Sylwestra wynajmujemy w&nbsp;całości tylko jednej grupie. Gdy&nbsp;ktoś wpłaci zaliczkę, termin jest zajęty.</p>
+          <p>Dom na&nbsp;Sylwestra wynajmujemy w&nbsp;całości tylko jednej ekipie. Po&nbsp;wpłacie zaliczki termin zostaje zamknięty dla&nbsp;innych.</p>
         </div>
         <div class="offer">
           <div class="offer-card">
             <span class="ribbon">Sylwester 2026/2027</span>
-            <h3>Cały dom — Agroturystyka&nbsp;Giławy</h3>
-            <p class="sub">Giławy 75, Warmia · do&nbsp;14 osób · minimum 2 noce</p>
+            <h3>Cały dom na&nbsp;wyłączność — Agroturystyka&nbsp;Giławy</h3>
+            <p class="sub">Giławy 75 (gm. Purda, Warmia) · do&nbsp;14 osób · min. 2 noce</p>
             <ul class="checks">
-              <li><svg class="icon"><use href="#i-check"/></svg> 3 apartamenty z&nbsp;prywatnymi łazienkami</li>
-              <li><svg class="icon"><use href="#i-check"/></svg> Salon z&nbsp;kominkiem i&nbsp;duża jadalnia</li>
-              <li><svg class="icon"><use href="#i-check"/></svg> Parking na&nbsp;terenie gospodarstwa</li>
-              <li><svg class="icon"><use href="#i-check"/></svg> Posiłki z&nbsp;lokalnych produktów do&nbsp;wykupienia</li>
-              <li><svg class="icon"><use href="#i-check"/></svg> Cisza, las i&nbsp;jeziora w&nbsp;zasięgu spaceru</li>
+              <li><svg class="icon"><use href="#i-check"/></svg> 3 dwupokojowe apartamenty z&nbsp;prywatnymi łazienkami</li>
+              <li><svg class="icon"><use href="#i-check"/></svg> Przestronny salon z&nbsp;kominkiem, TV, Wi-Fi i&nbsp;duża jadalnia</li>
+              <li><svg class="icon"><use href="#i-check"/></svg> Zadaszony taras, ogród, miejsce na&nbsp;ognisko i&nbsp;bezpłatny parking</li>
+              <li><svg class="icon"><use href="#i-check"/></svg> Możliwość wykupienia domowych śniadań i&nbsp;posiłków na&nbsp;miejscu</li>
+              <li><svg class="icon"><use href="#i-check"/></svg> Zwierzęta domowe akceptowane (spokojna okolica pod&nbsp;lasem)</li>
             </ul>
-            <div class="price-note"><b>Cena ustalana indywidualnie</b> — zależy od&nbsp;liczby osób i&nbsp;liczby nocy. Zadzwońcie albo napiszcie, a&nbsp;podamy kwotę całości i&nbsp;wysokość zaliczki.</div>
-            <a class="btn btn-terra btn-lg" href="#rezerwacja"><svg class="icon"><use href="#i-cal"/></svg> Zarezerwuj i&nbsp;opłać zaliczkę</a>
+            <div class="price-note"><b>Cena ustalana indywidualnie</b> — zależy od&nbsp;wielkości grupy i&nbsp;liczby nocy (np.&nbsp;2, 3 lub&nbsp;4 noce). Zadzwońcie lub&nbsp;napiszcie — od&nbsp;ręki podamy dokładną wycenę całego pobytu i&nbsp;kwotę zaliczki.</div>
+            <a class="btn btn-terra btn-lg" href="#rezerwacja"><svg class="icon"><use href="#i-cal"/></svg> Zapytaj o&nbsp;termin i&nbsp;zaliczkę</a>
           </div>
           <div class="offer-side">
-            <h3>Termin jest tylko jeden</h3>
-            <p>Grudniowe weekendy rezerwuje się wcześnie, a&nbsp;sylwestrowa noc zdarza się raz w&nbsp;roku. Zapytajcie o&nbsp;dostępność już dziś — rozmowa do&nbsp;niczego nie&nbsp;zobowiązuje.</p>
+            <h3>Zadzwoń bezpośrednio do&nbsp;gospodarza</h3>
+            <p>Bez&nbsp;prowizji portali rezerwacyjnych i&nbsp;bez&nbsp;pośredników. Chętnie opowiemy o&nbsp;układzie pokoi, wyżywieniu i&nbsp;ustalimy szczegóły Waszego pobytu.</p>
             <a class="btn btn-gold" href="tel:+48512720750"><svg class="icon"><use href="#i-phone"/></svg> 512 720 750</a>
           </div>
         </div>
@@ -534,36 +577,36 @@
     <section id="rezerwacja">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Rezerwacja i&nbsp;zaliczka</p>
-          <h2>Zarezerwuj w&nbsp;trzech krokach</h2>
-          <p>Bez&nbsp;zakładania kont i&nbsp;wypełniania formularzy — wystarczy jedna wiadomość albo telefon.</p>
+          <p class="kicker">Rezerwacja bezpośrednio u&nbsp;właścicieli</p>
+          <h2>Zarezerwuj w&nbsp;trzech prostych krokach</h2>
+          <p>Bez&nbsp;zakładania kont i&nbsp;długich formularzy — wystarczy krótki telefon, SMS albo e-mail.</p>
         </div>
         <ol class="steps">
           <li>
-            <h3>Napisz lub&nbsp;zadzwoń</h3>
-            <p>Podaj daty przyjazdu i&nbsp;wyjazdu oraz liczbę osób. Gotowa wiadomość otworzy się po&nbsp;kliknięciu SMS albo e-mail.</p>
+            <h3>Zadzwoń lub&nbsp;wyślij SMS</h3>
+            <p>Podaj planowane daty (np.&nbsp;30.12–02.01 lub&nbsp;31.12–02.01) oraz liczbę osób. Kliknij poniżej, aby otworzyć gotową wiadomość.</p>
           </li>
           <li>
-            <h3>Potwierdzamy termin</h3>
-            <p>Sprawdzamy dostępność i&nbsp;odsyłamy cenę całego pobytu, kwotę zaliczki oraz dane do&nbsp;wpłaty.</p>
+            <h3>Otrzymujesz wycenę</h3>
+            <p>Potwierdzamy dostępność terminu i&nbsp;przesyłamy ostateczną cenę za&nbsp;cały dom, wysokość zaliczki oraz numer konta.</p>
           </li>
           <li>
             <h3>Wpłacasz zaliczkę</h3>
-            <p>Po&nbsp;zaksięgowaniu zaliczki dom jest Wasz na&nbsp;Sylwestra. Pozostałe szczegóły ustalamy już indywidualnie.</p>
+            <p>Po&nbsp;wpłacie zaliczki dom w&nbsp;Giławach jest zarezerwowany wyłącznie dla&nbsp;Waszej grupy.</p>
           </li>
         </ol>
         <div class="contact-cards">
           <a class="ccard" href="tel:+48512720750">
             <svg class="icon"><use href="#i-phone"/></svg>
-            <b>Zadzwoń</b>
+            <b>Zadzwoń teraz</b>
             <span>+48 512 720 750</span>
           </a>
-          <a class="ccard" href="sms:+48512720750?&amp;body=Dzie%C5%84%20dobry%2C%20chc%C4%99%20zarezerwowa%C4%87%20ca%C5%82y%20dom%20na%20Sylwestra.%20Termin%3A%20...%20Liczba%20os%C3%B3b%3A%20...%20Prosz%C4%99%20o%20dane%20do%20wp%C5%82aty%20zaliczki.">
+          <a class="ccard" href="sms:+48512720750?&amp;body=Dzie%C5%84%20dobry%2C%20chc%C4%99%20zapyta%C4%87%20o%20wynajem%20ca%C5%82ego%20domu%20w%20Gi%C5%82awach%20na%20Sylwestra.%20Termin%3A%20...%20Liczba%20os%C3%B3b%3A%20...%20Prosz%C4%99%20o%20cen%C4%99%20i%20warunki%20rezerwacji.">
             <svg class="icon"><use href="#i-msg"/></svg>
             <b>Wyślij SMS</b>
-            <span>gotowa wiadomość</span>
+            <span>otwórz gotową wiadomość</span>
           </a>
-          <a class="ccard" href="mailto:zedkrzeminski@poczta.onet.pl?subject=Rezerwacja%20Sylwester%20-%20Agroturystyka%20Gi%C5%82awy&amp;body=Dzie%C5%84%20dobry%2C%0A%0Achc%C4%99%20zarezerwowa%C4%87%20ca%C5%82y%20dom%20w%20Agroturystyce%20Gi%C5%82awy%20na%20Sylwestra.%0A%0ATermin%20(przyjazd%20-%20wyjazd)%3A%20%0ALiczba%20os%C3%B3b%3A%20%0ATelefon%3A%20%0A%0AProsz%C4%99%20o%20potwierdzenie%20dost%C4%99pno%C5%9Bci%20oraz%20dane%20do%20wp%C5%82aty%20zaliczki.">
+          <a class="ccard" href="mailto:zedkrzeminski@poczta.onet.pl?subject=Rezerwacja%20Sylwester%20-%20Agroturystyka%20Gi%C5%82awy&amp;body=Dzie%C5%84%20dobry%2C%0A%0Achc%C4%99%20zapyta%C4%87%20o%20rezerwacj%C4%99%20ca%C5%82ego%20domu%20w%20Agroturystyce%20Gi%C5%82awy%20na%20Sylwestra.%0A%0ATermin%20(przyjazd%20-%20wyjazd)%3A%20%0ALiczba%20os%C3%B3b%3A%20%0ATelefon%3A%20%0A%0AProsz%C4%99%20o%20potwierdzenie%20dost%C4%99pno%C5%9Bci%2C%20cen%C4%99%20oraz%20dane%20do%20wp%C5%82aty%20zaliczki.">
             <svg class="icon"><use href="#i-mail"/></svg>
             <b>Napisz e-mail</b>
             <span>zedkrzeminski@poczta.onet.pl</span>
@@ -576,29 +619,33 @@
     <section class="sand" id="faq">
       <div class="container">
         <div class="section-head">
-          <p class="kicker">Pytania</p>
-          <h2>Zanim zadzwonisz</h2>
+          <p class="kicker">Najczęstsze pytania</p>
+          <h2>Wszystko, co&nbsp;warto wiedzieć przed rezerwacją</h2>
         </div>
         <div class="faq">
           <details>
-            <summary>Ile osób zmieści się w&nbsp;domu?</summary>
-            <p>Do&nbsp;14 osób w&nbsp;trzech apartamentach z&nbsp;prywatnymi łazienkami. Do&nbsp;tego wspólny salon z&nbsp;kominkiem i&nbsp;duża jadalnia.</p>
+            <summary>Jak dokładnie podzielony jest dom i&nbsp;ile osób pomieści?</summary>
+            <p>W&nbsp;domu mieszczą się maksymalnie 14 osób. Do&nbsp;dyspozycji macie 3 niezależne, dwupokojowe apartamenty (dwa 5-osobowe i&nbsp;jeden 4-osobowy) — każdy z&nbsp;własną prywatną łazienką z&nbsp;prysznicem. Na&nbsp;parterze znajduje się wspólny salon z&nbsp;kominkiem, sofami i&nbsp;TV oraz duża jadalnia.</p>
           </details>
           <details>
-            <summary>Na&nbsp;ile nocy można przyjechać?</summary>
-            <p>Pobyt trwa minimum 2 noce. Jeśli chcecie zostać dłużej i&nbsp;spokojnie odpocząć po&nbsp;Nowym Roku — dajcie znać przy rezerwacji.</p>
+            <summary>Na&nbsp;ile nocy można wynająć dom na&nbsp;Sylwestra?</summary>
+            <p>Minimalna długość pobytu to&nbsp;2 noce. Chętnie gościmy też grupy przyjeżdżające na&nbsp;3–4 dni lub&nbsp;dłuższy zimowy wypoczynek połączony z&nbsp;Trzema Królami.</p>
           </details>
           <details>
-            <summary>Ile kosztuje Sylwester i&nbsp;jaka jest zaliczka?</summary>
-            <p>Cenę ustalamy indywidualnie, zależnie od&nbsp;liczby osób i&nbsp;nocy. Po&nbsp;potwierdzeniu terminu podajemy cenę całości, kwotę zaliczki i&nbsp;dane do&nbsp;wpłaty.</p>
+            <summary>Ile kosztuje wynajem całego domu i&nbsp;jaka jest zaliczka?</summary>
+            <p>Cena zależy od&nbsp;liczby osób i&nbsp;długości pobytu. Zadzwońcie pod&nbsp;numer <a href="tel:+48512720750" style="color:var(--terracotta);font-weight:700">+48 512 720 750</a> lub&nbsp;wyślijcie SMS — od&nbsp;razu podamy całkowity koszt oraz kwotę zaliczki gwarantującej rezerwację.</p>
           </details>
           <details>
-            <summary>Czy&nbsp;są posiłki?</summary>
-            <p>Tak, posiłki można dodatkowo wykupić na&nbsp;miejscu. Goście w&nbsp;opiniach chwalą zwłaszcza śniadania.</p>
+            <summary>Czy&nbsp;można zamówić śniadania lub&nbsp;ciepłe posiłki?</summary>
+            <p>Tak! Posiłki przygotowywane na&nbsp;bazie produktów z&nbsp;naszego ekologicznego gospodarstwa (w&nbsp;tym jajka od&nbsp;własnych kur i&nbsp;domowe przetwory) można dodatkowo zamówić na&nbsp;miejscu. Nasze śniadania są oceniane przez gości na&nbsp;10/10.</p>
           </details>
           <details>
-            <summary>Jak&nbsp;dojechać?</summary>
-            <p>Giławy 75, 11-030 Giławy (woj.&nbsp;warmińsko-mazurskie). Parking jest na&nbsp;terenie gospodarstwa. <a href="https://www.google.com/maps/dir/?api=1&amp;destination=53.72653514861423%2C20.7880292513791" style="color:var(--terracotta);font-weight:700">Wyznacz trasę w&nbsp;Google Maps →</a></p>
+            <summary>Czy&nbsp;można przyjechać z&nbsp;psem lub&nbsp;innym zwierzakiem?</summary>
+            <p>Tak, akceptujemy zwierzęta domowe (po&nbsp;wcześniejszym uzgodnieniu). Siedlisko leży na&nbsp;uboczu, w&nbsp;otoczeniu łąk i&nbsp;lasu, z&nbsp;dala od&nbsp;miejskiego huku petard, dzięki czemu czworonogi czują się tu znacznie spokojniej niż w&nbsp;mieście.</p>
+          </details>
+          <details>
+            <summary>Jak&nbsp;szybko dojedziemy z&nbsp;Olsztyna, Warszawy lub&nbsp;Trójmiasta?</summary>
+            <p>Adres to&nbsp;Giławy 75, 11-030 Purda (woj.&nbsp;warmińsko-mazurskie). Z&nbsp;Olsztyna dojedziecie w&nbsp;ok.&nbsp;25 minut (25&nbsp;km), z&nbsp;Pasymia w&nbsp;10 minut, z&nbsp;Warszawy w&nbsp;ok.&nbsp;2,5 godziny (trasą S7 przez Nidzicę/Szczytno lub&nbsp;Olsztynek), a&nbsp;z&nbsp;Gdańska w&nbsp;ok.&nbsp;2 godziny. Bezpłatny parking czeka na&nbsp;terenie posesji. <a href="https://www.google.com/maps/dir/?api=1&amp;destination=53.72653514861423%2C20.7880292513791" target="_blank" rel="noopener" style="color:var(--terracotta);font-weight:700">Wyznacz trasę w&nbsp;Google Maps →</a></p>
           </details>
         </div>
       </div>
@@ -609,10 +656,10 @@
       <div class="container">
         <p class="kicker">Ostatni krok</p>
         <h2>Dom na&nbsp;Sylwestra czeka na&nbsp;jedną grupę. Niech to&nbsp;będzie Wasza.</h2>
-        <p>Zadzwoń albo napisz, potwierdź termin i&nbsp;wpłać zaliczkę. Potem zostaje już tylko spakować walizki i&nbsp;ciepłe swetry.</p>
+        <p>Zadzwoń albo napisz, potwierdź dostępność terminu i&nbsp;zarezerwuj cały dom dla&nbsp;swojej ekipy.</p>
         <div class="hero-cta">
-          <a class="btn btn-gold btn-lg" href="#rezerwacja"><svg class="icon"><use href="#i-cal"/></svg> Zarezerwuj i&nbsp;opłać zaliczkę</a>
-          <a class="btn btn-ghost btn-lg" href="tel:+48512720750"><svg class="icon"><use href="#i-phone"/></svg> 512 720 750</a>
+          <a class="btn btn-gold btn-lg" href="tel:+48512720750"><svg class="icon"><use href="#i-phone"/></svg> Zadzwoń: 512 720 750</a>
+          <a class="btn btn-ghost btn-lg" href="#rezerwacja"><svg class="icon"><use href="#i-cal"/></svg> Wyślij SMS lub&nbsp;e-mail</a>
         </div>
       </div>
     </section>
@@ -620,15 +667,25 @@
 
   <footer class="site">
     <div class="container">
-      <div>© Agroturystyka&nbsp;Giławy · Giławy 75, 11-030 Giławy</div>
+      <div>© Agroturystyka&nbsp;Giławy · Giławy 75, 11-030 Giławy (gm. Purda, Warmia)</div>
       <div><a href="index.html">Strona główna gospodarstwa</a> · <a href="tel:+48512720750">+48 512 720 750</a> · <a href="mailto:zedkrzeminski@poczta.onet.pl">zedkrzeminski@poczta.onet.pl</a></div>
     </div>
   </footer>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+    <button class="lb-close" id="lb-close" aria-label="Zamknij podgląd">×</button>
+    <img id="lb-img" src="" alt="">
+    <div class="lb-cap" id="lb-cap"></div>
+  </div>
 
   <nav class="mbar" aria-label="Szybka rezerwacja">
     <a class="btn btn-ghost" href="tel:+48512720750"><svg class="icon"><use href="#i-phone"/></svg> Zadzwoń</a>
     <a class="btn btn-gold" href="#rezerwacja"><svg class="icon"><use href="#i-cal"/></svg> Rezerwuj</a>
   </nav>
+
+  <!-- GoatCounter analytics -->
+  <script data-goatcounter="https://gilawy.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 
   <script>
     (function () {
@@ -666,7 +723,12 @@
       document.querySelectorAll('a[href^="tel:"], a[href^="sms:"], a[href^="mailto:"]').forEach(function (a) {
         a.addEventListener('click', function () {
           var method = a.getAttribute('href').split(':')[0];
-          if (typeof gtag === 'function') gtag('event', 'sylwester_kontakt', { method: method });
+          if (typeof gtag === 'function') {
+            gtag('event', 'sylwester_kontakt', { method: method });
+            if (method === 'tel' || method === 'sms') {
+              gtag('event', 'conversion', { 'send_to': 'AW-17350584286/WjOwCJOV_b8cEN7Ps9FA' });
+            }
+          }
           phCapture('sylwester_kontakt', {
             method: method,
             href: a.getAttribute('href'),
@@ -674,6 +736,35 @@
           });
         });
       });
+
+      // Lightbox dla zdjęć w galerii i sekcji story
+      var lb = document.getElementById('lb');
+      var lbImg = document.getElementById('lb-img');
+      var lbCap = document.getElementById('lb-cap');
+      var lbClose = document.getElementById('lb-close');
+      function closeLb() {
+        if (!lb) return;
+        lb.classList.remove('open');
+        lbImg.src = '';
+      }
+      document.querySelectorAll('.g-card, .story-photos img').forEach(function (item) {
+        item.addEventListener('click', function () {
+          var img = item.tagName === 'IMG' ? item : item.querySelector('img');
+          var cap = item.tagName === 'FIGURE' && item.querySelector('figcaption')
+            ? item.querySelector('figcaption').textContent.trim()
+            : (img ? img.alt : '');
+          if (img && lb) {
+            lbImg.src = img.getAttribute('src');
+            lbImg.alt = img.alt || '';
+            lbCap.textContent = cap || '';
+            lb.classList.add('open');
+            phCapture('klik_galeria_sylwester', { src: img.getAttribute('src'), alt: cap });
+          }
+        });
+      });
+      if (lbClose) lbClose.addEventListener('click', closeLb);
+      if (lb) lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
 
       document.querySelectorAll('a[href^="#"]').forEach(function (a) {
         a.addEventListener('click', function () {
