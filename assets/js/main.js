@@ -1,4 +1,4 @@
-/* Pod Silosem — interakcje strony */
+/* Agroturystyka Giławy — interakcje strony */
 (function () {
   "use strict";
 

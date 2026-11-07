@@ -1,6 +1,6 @@
-# Pod Silosem — Agroturystyka w Giławach
+# Agroturystyka Giławy
 
-Strona wizytówka agroturystyki „Pod Silosem" w Giławach na Warmii.
+Strona wizytówka „Agroturystyka Giławy" w Giławach na Warmii.
 Statyczna, jednostronicowa, bez frameworków (HTML + CSS + JS).
 
 ## Podgląd lokalny
