@@ -759,10 +759,8 @@
         a.addEventListener('click', function () {
           var method = a.getAttribute('href').split(':')[0];
           if (typeof gtag === 'function') {
+            gtag('event', 'conversion', { 'send_to': 'AW-17350584286/WjOwCJOV_b8cEN7Ps9FA' });
             gtag('event', 'sylwester_kontakt', { method: method });
-            if (method === 'tel' || method === 'sms') {
-              gtag('event', 'conversion', { 'send_to': 'AW-17350584286/WjOwCJOV_b8cEN7Ps9FA' });
-            }
           }
           phCapture('sylwester_kontakt', {
             method: method,
