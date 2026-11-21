@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17350584286"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17350584286');
+  </script>
+
+  <!-- PostHog -->
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_viyBh6a5u47PLYNjKdWkm2vDEg25r6kVnGtECacyVh4t', {
+      api_host: 'https://eu.i.posthog.com',
+      person_profiles: 'identified_only',
+      autocapture: true,
+      capture_pageview: true,
+      capture_pageleave: true,
+      enable_heatmaps: true,
+      capture_dead_clicks: true,
+      loaded: function (ph) {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var gclid = params.get('gclid') || params.get('gbraid') || params.get('wbraid');
+          var utmSource = params.get('utm_source');
+          var sessionProps = {};
+          if (gclid) {
+            sessionProps.from_google_ads = true;
+            sessionProps.gclid = gclid;
+          } else if (utmSource && /google|adwords|gads/i.test(utmSource)) {
+            sessionProps.from_google_ads = true;
+          }
+          ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(function (k) {
+            if (params.get(k)) sessionProps[k] = params.get(k);
+          });
+          ph.register_for_session(sessionProps);
+        } catch (e) {}
+      }
+    });
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Przyjęcie Komunijne na&nbsp;Warmii (do&nbsp;30 osób) — Olsztyn, Pasym, Barczewo, Szczytno | Agroturystyka&nbsp;Giławy</title>
+  <meta name="description" content="Kameralne przyjęcie komunijne do ok. 30 osób na wyłączność w Agroturystyce Giławy (10–25 min od Pasymia, Purdy, Barczewa, Szczytna, Dźwierzut, Olsztyna i Biskupca). Przestronna sala jadalniana bez ścisku, zadaszony taras, zielony ogród, domowa kuchnia i opcja noclegu dla rodziny.">
+  <meta name="keywords" content="komunia Olsztyn, przyjęcie komunijne Olsztyn okolice, sala na komunię do 30 osób, komunia Pasym, komunia Barczewo, komunia Szczytno, komunia Purda, komunia Biskupiec, komunia Dźwierzuty, przyjęcie komunijne Warmia, agroturystyka na komunię, kameralna komunia z ogrodem">
+  <meta property="og:title" content="Kameralne Przyjęcie Komunijne na Warmii (ok. 30 osób) — na wyłączność | Agroturystyka Giławy">
+  <meta property="og:description" content="Dom, zadaszony taras i zielony ogród tylko dla Waszej rodziny (ok. 30 gości). Domowa kuchnia, spokój wśród łąk i szybki dojazd z Olsztyna, Pasymia, Barczewa i Szczytna.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gilawy.pl/komunia.html">
+  <meta property="og:image" content="https://gilawy.pl/assets/img/foto-06.webp">
+  <meta property="og:locale" content="pl_PL">
+  <link rel="canonical" href="https://gilawy.pl/komunia.html">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#243326">
+  <link rel="preload" as="image" href="assets/img/foto-06.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["EventVenue", "LodgingBusiness"],
+        "name": "Agroturystyka Giławy — Kameralne Przyjęcia Komunijne na Warmii",
+        "description": "Kameralne przyjęcia komunijne do ok. 30 osób na wyłączność w Giławach (gm. Purda). Przestronna sala jadalniana na parterze, zadaszony taras, zielony ogród, domowe menu z eko gospodarstwa oraz 3 apartamenty noclegowe dla rodziny z daleka.",
+        "image": "https://gilawy.pl/assets/img/foto-06.webp",
+        "url": "https://gilawy.pl/komunia.html",
+        "telephone": "+48512720750",
+        "email": "zedkrzeminski@poczta.onet.pl",
+        "maximumAttendeeCapacity": 30,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Giławy 75",
+          "postalCode": "11-030",
+          "addressLocality": "Giławy",
+          "addressRegion": "warmińsko-mazurskie",
+          "addressCountry": "PL"
+        },
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 53.726535,
+            "longitude": 20.788029
+          },
+          "geoRadius": "30000"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "9.4",
+          "bestRating": "10",
+          "reviewCount": "20"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ile osób możemy zaprosić na przyjęcie komunijne w Agroturystyce Giławy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Obsługujemy kameralne przyjęcia komunijne do ok. 30 osób. Taka wielkość pozwala ustawić stoły na parterze bez ścisku i zachować swobodną, rodzinną atmosferę w jadalni, na zadaszonym tarasie oraz w ogrodzie."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy podczas komunii mamy dom i ogród wyłącznie dla siebie?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak. W dniu komunii organizujemy tylko jedno przyjęcie — nie dzielicie sali, tarasu ani ogrodu z innymi rodzinami."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jak szybko można dojechać z Olsztyna, Pasymia, Barczewa lub Szczytna?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Giławy leżą w promieniu 10–30 minut jazdy od Pasymia (ok. 10 min), Purdy i Klebarka Wielkiego (ok. 15 min), Barczewa (ok. 15–20 min), Dźwierzut (ok. 20 min), Szczytna (ok. 20–25 min), Olsztyna (ok. 25 min z Pieczewa i Jarot) oraz Biskupca (ok. 25–30 min)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy rodzina przyjeżdżająca z daleka może zostać na nocleg?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak! Na piętrze mamy 3 niezależne, dwupokojowe apartamenty z prywatnymi łazienkami, które pomieszczą do 14 osób. To ogromna wygoda dla chrzestnych, dziadków i bliskich z innych miast."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --forest: #243326;
+      --forest-2: #2f4232;
+      --forest-3: #3e5541;
+      --sage: #6f846b;
+      --sage-soft: #e9efe6;
+      --gold: #c8a258;
+      --gold-2: #e6cb90;
+      --ivory: #fbf9f4;
+      --linen: #f2ece1;
+      --ink: #2c2a26;
+      --muted: #666159;
+      --white: #ffffff;
+      --radius: 18px;
+      --maxw: 1120px;
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Nunito Sans", system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+    body { font-family: var(--sans); color: var(--ink); background: var(--ivory); line-height: 1.7; font-size: 17px; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: 22px; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.1; text-wrap: balance; }
+    h2 { font-size: clamp(2rem, 4.2vw, 3.05rem); }
+    h3 { font-size: 1.45rem; }
+    p, li, dd, blockquote { text-wrap: pretty; text-align: left; }
+    .center, .center p { text-align: center; }
+    .kicker { text-transform: uppercase; letter-spacing: 3px; font-size: .78rem; font-weight: 700; color: var(--sage); margin-bottom: .6rem; }
+    .dark .kicker { color: var(--gold-2); }
+    .icon { width: 1.15em; height: 1.15em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* buttons */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: .95rem 1.65rem; border-radius: 999px; font-weight: 700; font-size: 1rem; transition: transform .15s, box-shadow .15s, background .15s, border-color .15s; cursor: pointer; border: 2px solid transparent; text-align: center; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-gold { background: linear-gradient(135deg, var(--gold-2), var(--gold)); color: var(--forest); box-shadow: 0 10px 28px rgba(200,162,88,.32); }
+    .btn-gold:hover { box-shadow: 0 14px 34px rgba(200,162,88,.45); }
+    .btn-forest { background: var(--forest); color: var(--white); box-shadow: 0 10px 24px rgba(36,51,38,.2); }
+    .btn-forest:hover { background: var(--forest-2); }
+    .btn-ghost { border-color: rgba(255,255,255,.62); color: var(--white); background: rgba(36,51,38,.22); }
+    .btn-ghost:hover { background: rgba(255,255,255,.14); }
+    .btn-line { border-color: var(--forest-3); color: var(--forest); }
+    .btn-line:hover { background: var(--forest); color: var(--white); }
+    .btn-lg { padding: 1.08rem 2rem; font-size: 1.06rem; }
+
+    /* header */
+    .top { position: fixed; inset: 0 0 auto 0; z-index: 50; background: rgba(251,249,244,.92); backdrop-filter: blur(12px); color: var(--forest); border-bottom: 1px solid rgba(36,51,38,.1); }
+    .top .container { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 1rem; }
+    .brand { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; line-height: 1; color: var(--forest); }
+    .brand small { display: block; font-family: var(--sans); font-size: .68rem; letter-spacing: 2px; text-transform: uppercase; color: var(--sage); font-weight: 700; margin-top: 3px; }
+    .top-actions { display: flex; gap: .9rem; align-items: center; }
+    .top-actions .btn { padding: .55rem 1.2rem; font-size: .9rem; }
+    .top-link { font-size: .92rem; font-weight: 600; color: var(--forest-2); }
+    .top-link:hover { color: var(--gold); }
+
+    /* hero */
+    .hero { position: relative; min-height: 96svh; display: flex; align-items: center; color: var(--white); background: var(--forest) url("assets/img/foto-06.webp") center 55%/cover no-repeat; padding: 112px 0 74px; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(25,38,27,.88) 0%, rgba(28,42,30,.72) 52%, rgba(28,42,30,.38) 100%); }
+    .hero .container { position: relative; }
+    .hero-inner { max-width: 740px; }
+    .badge { display: inline-flex; align-items: center; gap: .5rem; padding: .45rem 1.05rem; border: 1px solid rgba(230,203,144,.6); border-radius: 999px; color: var(--gold-2); font-size: .84rem; font-weight: 700; letter-spacing: .5px; margin-bottom: 1.3rem; background: rgba(25,38,27,.45); backdrop-filter: blur(4px); }
+    .hero h1 { font-size: clamp(2.6rem, 6.4vw, 4.7rem); color: var(--white); margin-bottom: 1.15rem; }
+    .hero h1 em { color: var(--gold-2); font-style: italic; }
+    .hero .lead { font-size: clamp(1.04rem, 2vw, 1.22rem); max-width: 630px; color: rgba(255,255,255,.94); margin-bottom: 1.8rem; }
+
+    .hero-pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; max-width: 620px; margin-bottom: 2rem; }
+    .pillar { padding: .85rem 1rem; border-radius: 14px; background: rgba(255,255,255,.1); border: 1px solid rgba(230,203,144,.32); backdrop-filter: blur(6px); }
+    .pillar b { display: block; font-family: var(--serif); font-size: 1.65rem; line-height: 1.05; color: var(--gold-2); }
+    .pillar span { font-size: .82rem; color: rgba(255,255,255,.88); }
+
+    .hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-bottom: 1.9rem; }
+    .hero-facts { display: flex; flex-wrap: wrap; gap: .55rem 1.4rem; font-size: .94rem; color: rgba(255,255,255,.92); list-style: none; }
+    .hero-facts li { display: flex; align-items: center; gap: .45rem; }
+    .hero-facts .icon { color: var(--gold-2); }
+
+    /* sections */
+    section { padding: 86px 0; }
+    .dark { background: var(--forest); color: var(--white); }
+    .dark h2, .dark h3 { color: var(--white); }
+    .linen { background: var(--linen); }
+    .sage-bg { background: var(--sage-soft); }
+    .section-head { max-width: 730px; margin: 0 auto 3rem; text-align: center; }
+    .section-head p { color: var(--muted); margin-top: .85rem; text-align: center; }
+    .dark .section-head p { color: rgba(255,255,255,.78); }
+
+    /* story */
+    .story { display: grid; grid-template-columns: 1.05fr 1fr; gap: 3.2rem; align-items: center; }
+    .story-text p + p { margin-top: 1rem; }
+    .story-text h2 { margin-bottom: 1.2rem; }
+    .story-quote { margin-top: 1.5rem; padding: 1.1rem 1.3rem; border-left: 3px solid var(--gold); background: var(--linen); border-radius: 0 14px 14px 0; font-size: .97rem; color: var(--forest); }
+    .story-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .story-photos img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); box-shadow: 0 18px 40px rgba(36,51,38,.14); cursor: zoom-in; transition: transform .25s ease; }
+    .story-photos img:hover { transform: translateY(-2px); }
+    .story-photos .tall { grid-row: span 2; aspect-ratio: 3/4.3; object-position: 28% center; }
+    .story-photos .sq { aspect-ratio: 4/3; }
+
+    /* timeline */
+    .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; list-style: none; }
+    .timeline li { background: var(--forest-2); border: 1px solid rgba(230,203,144,.2); border-radius: var(--radius); padding: 1.7rem 1.45rem; }
+    .timeline .time { font-family: var(--serif); font-size: 1.55rem; color: var(--gold-2); line-height: 1.1; margin-bottom: .65rem; }
+    .timeline h3 { font-size: 1.32rem; margin-bottom: .5rem; }
+    .timeline p { color: rgba(255,255,255,.82); font-size: .96rem; }
+
+    /* benefits */
+    .benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; }
+    .benefit { background: var(--white); border-radius: var(--radius); padding: 1.75rem 1.55rem; box-shadow: 0 6px 20px rgba(36,51,38,.07); border: 1px solid rgba(36,51,38,.06); }
+    .benefit .ico { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: var(--sage-soft); color: var(--forest); margin-bottom: 1rem; border: 1px solid rgba(111,132,107,.25); }
+    .benefit .ico .icon { width: 24px; height: 24px; }
+    .benefit h3 { margin-bottom: .45rem; color: var(--forest); }
+    .benefit p { color: var(--muted); font-size: .96rem; }
+
+    /* location 30km */
+    .loc-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.2rem; align-items: stretch; }
+    .town-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; margin: 1.4rem 0 1.6rem; }
+    .town { background: var(--white); border-radius: 14px; padding: .95rem 1.1rem; border: 1px solid rgba(36,51,38,.09); display: flex; justify-content: space-between; align-items: center; gap: .8rem; }
+    .town strong { display: block; font-size: 1rem; color: var(--forest); }
+    .town small { display: block; font-size: .84rem; color: var(--muted); line-height: 1.3; }
+    .town-time { flex: none; font-weight: 700; font-size: .86rem; color: var(--forest); background: var(--sage-soft); padding: .3rem .75rem; border-radius: 999px; white-space: nowrap; }
+    .loc-note { font-size: .94rem; color: var(--muted); }
+    .map-box { display: flex; flex-direction: column; gap: .8rem; }
+    .map-box iframe { width: 100%; flex: 1; min-height: 360px; border: 0; border-radius: var(--radius); box-shadow: 0 16px 36px rgba(36,51,38,.12); }
+
+    /* gallery */
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .g-card { position: relative; border-radius: 16px; overflow: hidden; background: var(--forest); box-shadow: 0 10px 26px rgba(36,51,38,.11); cursor: zoom-in; margin: 0; }
+    .g-card img { width: 100%; height: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform .35s ease; }
+    .g-card.crop-left img { object-position: 28% center; }
+    .g-card:hover img { transform: scale(1.04); }
+    .g-card.wide { grid-column: span 2; }
+    .g-card.wide img { aspect-ratio: 16/9; }
+    .g-card figcaption { position: absolute; inset: auto 0 0 0; padding: 1.8rem 1rem .75rem; background: linear-gradient(180deg, transparent 0%, rgba(22,33,24,.88) 100%); color: var(--white); font-size: .88rem; font-weight: 600; line-height: 1.35; pointer-events: none; }
+
+    /* lightbox */
+    .lb { position: fixed; inset: 0; z-index: 100; background: rgba(16,24,18,.93); backdrop-filter: blur(6px); display: none; align-items: center; justify-content: center; padding: 24px; }
+    .lb.open { display: flex; }
+    .lb img { max-width: min(1100px, 94vw); max-height: 84vh; border-radius: 14px; box-shadow: 0 20px 60px rgba(0,0,0,.6); object-fit: contain; }
+    .lb-cap { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); color: var(--white); background: rgba(24,36,26,.88); padding: .5rem 1.15rem; border-radius: 999px; font-size: .92rem; text-align: center; max-width: 90vw; }
+    .lb-close { position: fixed; top: 20px; right: 24px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.28); background: rgba(24,36,26,.85); color: var(--white); font-size: 1.6rem; cursor: pointer; display: grid; place-items: center; line-height: 1; }
+
+    /* reviews */
+    .reviews { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; }
+    .review { background: var(--forest-2); border-radius: var(--radius); padding: 1.6rem; border: 1px solid rgba(230,203,144,.16); }
+    .review blockquote { font-family: var(--serif); font-size: 1.35rem; line-height: 1.32; margin-bottom: 1rem; color: var(--white); }
+    .review footer { font-size: .9rem; color: rgba(255,255,255,.74); }
+    .review footer b { color: var(--gold-2); }
+    .score { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 2.4rem; }
+    .score b { font-family: var(--serif); font-size: 3.4rem; color: var(--gold-2); line-height: 1; }
+    .score span { text-align: left; font-size: .95rem; color: rgba(255,255,255,.84); }
+
+    /* offer */
+    .offer { display: grid; grid-template-columns: 1.18fr .82fr; gap: 2rem; align-items: stretch; }
+    .offer-card { background: var(--white); border-radius: 24px; padding: 2.4rem; box-shadow: 0 18px 40px rgba(36,51,38,.11); border: 2px solid var(--gold); position: relative; }
+    .offer-card .ribbon { position: absolute; top: -14px; left: 2.4rem; background: var(--forest); color: var(--gold-2); font-size: .78rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: .35rem .95rem; border-radius: 999px; }
+    .offer-card h3 { font-size: 2rem; margin-bottom: .35rem; color: var(--forest); }
+    .offer-card .sub { color: var(--muted); margin-bottom: 1.4rem; }
+    .checks { list-style: none; display: grid; gap: .65rem; margin-bottom: 1.8rem; }
+    .checks li { display: flex; gap: .65rem; align-items: flex-start; }
+    .checks .icon { color: var(--sage); margin-top: .28rem; }
+    .price-note { background: var(--linen); border-radius: 14px; padding: 1.05rem 1.25rem; margin-bottom: 1.6rem; font-size: .96rem; }
+    .price-note b { color: var(--forest); }
+    .offer-side { background: var(--forest); color: var(--white); border-radius: 24px; padding: 2.2rem; display: flex; flex-direction: column; justify-content: center; }
+    .offer-side h3 { color: var(--white); margin-bottom: .8rem; font-size: 1.75rem; }
+    .offer-side p { color: rgba(255,255,255,.82); margin-bottom: 1.2rem; }
+    .side-list { list-style: none; display: grid; gap: .55rem; margin-bottom: 1.6rem; font-size: .95rem; color: rgba(255,255,255,.9); }
+    .side-list li { display: flex; gap: .55rem; align-items: flex-start; }
+    .side-list .icon { color: var(--gold-2); margin-top: .25rem; }
+
+    /* steps */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; list-style: none; counter-reset: step; margin-bottom: 2.6rem; }
+    .steps li { background: var(--white); border-radius: var(--radius); padding: 1.7rem 1.5rem; position: relative; counter-increment: step; box-shadow: 0 6px 18px rgba(36,51,38,.07); border: 1px solid rgba(36,51,38,.06); }
+    .steps li::before { content: counter(step); display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--gold-2), var(--gold)); color: var(--forest); font-weight: 700; font-size: 1.1rem; margin-bottom: .9rem; }
+    .steps h3 { margin-bottom: .4rem; font-size: 1.3rem; color: var(--forest); }
+    .steps p { color: var(--muted); font-size: .96rem; }
+    .contact-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .ccard { display: flex; flex-direction: column; align-items: center; gap: .3rem; text-align: center; padding: 1.55rem 1rem; border-radius: var(--radius); background: var(--forest); color: var(--white); transition: transform .15s, background .15s; }
+    .ccard:hover { transform: translateY(-3px); background: var(--forest-2); }
+    .ccard .icon { width: 30px; height: 30px; color: var(--gold-2); margin-bottom: .3rem; }
+    .ccard b { font-size: 1.05rem; }
+    .ccard span { font-size: .9rem; opacity: .82; }
+
+    /* faq */
+    .faq { max-width: 790px; margin: 0 auto; display: grid; gap: .8rem; }
+    .faq details { background: var(--white); border-radius: 14px; padding: 1.15rem 1.45rem; box-shadow: 0 4px 12px rgba(36,51,38,.06); border: 1px solid rgba(36,51,38,.06); }
+    .faq summary { cursor: pointer; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 1rem; color: var(--forest); }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; color: var(--gold); font-size: 1.45rem; line-height: 1; }
+    .faq details[open] summary::after { content: "–"; }
+    .faq details p { margin-top: .75rem; color: var(--muted); }
+
+    /* final cta */
+    .final { text-align: center; background: var(--forest) url("assets/img/foto-06.webp") center/cover; position: relative; color: var(--white); }
+    .final::before { content: ""; position: absolute; inset: 0; background: rgba(25,38,27,.84); }
+    .final .container { position: relative; }
+    .final h2 { color: var(--white); margin-bottom: 1rem; }
+    .final p { max-width: 620px; margin: 0 auto 1.8rem; color: rgba(255,255,255,.9); text-align: center; }
+    .final .hero-cta { justify-content: center; }
+
+    footer.site { background: #19241a; color: rgba(255,255,255,.76); padding: 2.4rem 0 6rem; font-size: .92rem; }
+    footer.site .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+    footer.site a:hover { color: var(--gold-2); }
+
+    /* sticky mobile bar */
+    .mbar { position: fixed; inset: auto 0 0 0; z-index: 60; display: none; gap: .5rem; padding: .6rem .7rem calc(.6rem + env(safe-area-inset-bottom)); background: rgba(25,38,27,.96); border-top: 1px solid rgba(230,203,144,.2); }
+    .mbar a { flex: 1; padding: .8rem .5rem; font-size: .95rem; }
+
+    @media (max-width: 980px) {
+      .timeline { grid-template-columns: repeat(2, 1fr); }
+      .benefits, .reviews { grid-template-columns: 1fr 1fr; }
+      .gallery { grid-template-columns: 1fr 1fr; }
+      .g-card.wide { grid-column: span 2; }
+      .story, .offer, .loc-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      section { padding: 64px 0; }
+      .top-link { display: none; }
+      .top-actions .btn { padding: .5rem .95rem; font-size: .85rem; }
+      .hero-pillars { grid-template-columns: 1fr 1fr 1fr; gap: .5rem; }
+      .pillar { padding: .65rem .6rem; }
+      .pillar b { font-size: 1.3rem; }
+      .pillar span { font-size: .74rem; }
+      .timeline, .benefits, .reviews, .steps, .contact-cards, .gallery, .town-grid { grid-template-columns: 1fr; }
+      .g-card.wide { grid-column: span 1; }
+      .g-card.wide img { aspect-ratio: 4/3; }
+      .offer-card { padding: 2rem 1.4rem; }
+      .offer-card .ribbon { left: 1.4rem; }
+      .mbar { display: flex; }
+      .hero-cta .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+      <symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+      <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
+      <symbol id="i-bed" viewBox="0 0 24 24"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+      <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 17h14M5 17a2 2 0 1 0 4 0M15 17a2 2 0 1 0 4 0M3 17v-5l2-5h14l2 5v5"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.1-17.1 1.4 1.4m11.4 11.4 1.4 1.4M2 12h2M20 12h2m-17.1 7.1 1.4-1.4m11.4-11.4 1.4-1.4"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="top">
+    <div class="container">
+      <a class="brand" href="index.html">Agroturystyka&nbsp;Giławy<small>Przyjęcia Komunijne · Warmia</small></a>
+      <div class="top-actions">
+        <a class="top-link" href="#dojazd">Dojazd (30 km)</a>
+        <a class="top-link" href="#galeria">Zdjęcia</a>
+        <a class="top-link" href="tel:+48512720750">+48 512 720 750</a>
+        <a class="btn btn-forest" href="#rezerwacja">Zapytaj o&nbsp;termin</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="start">
+      <div class="container">
+        <div class="hero-inner">
+          <span class="badge"><svg class="icon"><use href="#i-sun"/></svg> Przyjęcia Komunijne 2027 / 2028 · Giławy, Warmia</span>
+          <h1>Kameralne przyjęcie komunijne — <em>cały dom i&nbsp;ogród tylko dla&nbsp;Was</em></h1>
+          <p class="lead">Szukacie spokojnego miejsca na&nbsp;<strong>Pierwszą Komunię Świętą do&nbsp;ok.&nbsp;30 osób</strong> w&nbsp;okolicach Olsztyna, Pasymia, Barczewa lub&nbsp;Szczytna? Zamiast zatłoczonej sali z&nbsp;kilkoma przyjęciami naraz wybierzcie nasze siedlisko w&nbsp;Giławach — przestronną, jasną część jadalnianą bez&nbsp;ścisku, zadaszony taras, zielony ogród i&nbsp;domową kuchnię na&nbsp;wyłączność.</p>
+
+          <div class="hero-pillars" aria-label="Najważniejsze atuty oferty komunijnej">
+            <div class="pillar"><b>ok. 30</b><span>gości w&nbsp;komforcie</span></div>
+            <div class="pillar"><b>1 rodzina</b><span>100% na&nbsp;wyłączność</span></div>
+            <div class="pillar"><b>10–25 min</b><span>z&nbsp;całej okolicy (30 km)</span></div>
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn btn-gold btn-lg" href="#rezerwacja"><svg class="icon"><use href="#i-cal"/></svg> Sprawdź wolny termin</a>
+            <a class="btn btn-ghost btn-lg" href="tel:+48512720750"><svg class="icon"><use href="#i-phone"/></svg> Zadzwoń: 512 720 750</a>
+          </div>
+
+          <ul class="hero-facts">
+            <li><svg class="icon"><use href="#i-utensils"/></svg> domowe posiłki z&nbsp;eko gospodarstwa + menu dla&nbsp;dzieci</li>
+            <li><svg class="icon"><use href="#i-bed"/></svg> opcja noclegu dla&nbsp;rodziny z&nbsp;daleka (do&nbsp;14 osób)</li>
+            <li><svg class="icon"><use href="#i-star"/></svg> 9,4/10 na&nbsp;Booking.com</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORIA / DLACZEGO U NAS -->
+    <section id="miejsce">
+      <div class="container story">
+        <div class="story-text">
+          <p class="kicker">Komunia bez&nbsp;pośpiechu i&nbsp;tłoku</p>
+          <h2>Uroczysty obiad przy wspólnym stole, a&nbsp;za&nbsp;drzwiami majowa zieleń</h2>
+          <p>Dzień Pierwszej Komunii Świętej mija szybko — tym bardziej warto spędzić go wśród najbliższych, bez&nbsp;gwaru obcych stolików i&nbsp;zerkania na&nbsp;zegarek. W&nbsp;<strong>Agroturystyce Giławy</strong> przyjmujemy <strong>tylko jedną rodzinę tego dnia</strong> (do&nbsp;ok.&nbsp;30 osób), oddając Wam całą przestrzeń parteru, zadaszony taras oraz rozległy ogród z&nbsp;widokiem na&nbsp;łąki i&nbsp;las.</p>
+          <p>Dorośli mogą spokojnie porozmawiać przy kawie przy wspólnym stole lub&nbsp;na&nbsp;zadaszonym tarasie, dziadkowie mają ciszę i&nbsp;wygodę, a&nbsp;dzieci zamiast nudzić się przy stole mogą bezpiecznie wybiegać się na&nbsp;zielonej trawie z&nbsp;dala od&nbsp;ruchliwych ulic.</p>
+          <p>Gotujemy z&nbsp;sercem i&nbsp;ze&nbsp;świeżych składników z&nbsp;naszego ekologicznego gospodarstwa — a&nbsp;jeśli część bliskich przyjeżdża z&nbsp;dalszych stron Polski, mogą zostać u&nbsp;nas na&nbsp;noc w&nbsp;trzech komfortowych apartamentach z&nbsp;łazienkami.</p>
+          <div class="story-quote"><strong>Naturalny plener na&nbsp;pamiątkowe zdjęcia:</strong> zadaszony taras w&nbsp;kwiatach, słoneczny ogród, soczysta majowa łąka i&nbsp;ściana sosnowego lasu — rodzinną sesję komunijną zrobicie na&nbsp;miejscu, bez&nbsp;dodatkowych dojazdów.</div>
+        </div>
+        <div class="story-photos">
+          <img class="tall" src="assets/img/foto-05.webp" width="900" height="1600" alt="Dom Agroturystyki Giławy z zadaszonym tarasem, kwiatami i zielonym trawnikiem" loading="lazy">
+          <img class="sq" src="assets/img/foto-03.webp" width="1920" height="1440" alt="Jasna jadalnia ze świecznikami i kącikiem kawowym na przyjęcie komunijne" loading="lazy">
+          <img class="sq" src="assets/img/foto-08.webp" width="476" height="476" alt="Rozległa zielona łąka i sosnowy las tuż obok domu w Giławach" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- PRZEBIEG DNIA -->
+    <section class="dark" id="przebieg">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Jak wygląda przyjęcie komunijne w&nbsp;Giławach</p>
+          <h2>Spokojny rytm rodzinnego święta — od&nbsp;obiadu po&nbsp;wieczorną kawę</h2>
+          <p>Ustalamy scenariusz pod&nbsp;Waszą godzinę Mszy Świętej i&nbsp;potrzeby rodziny — bez&nbsp;sztywnego pośpiechu.</p>
+        </div>
+        <ol class="timeline">
+          <li>
+            <div class="time">01 · Powitanie</div>
+            <h3>Prosto z&nbsp;kościoła na&nbsp;zielone siedlisko</h3>
+            <p>Wygodny, bezpłatny parking na&nbsp;posesji tuż przy domu. Powitanie gości na&nbsp;zadaszonym tarasie i&nbsp;chwila na&nbsp;życzenia bez&nbsp;tłumu innych rodzin.</p>
+          </li>
+          <li>
+            <div class="time">02 · Obiad</div>
+            <h3>Uroczysty, domowy posiłek</h3>
+            <p>Wspólny obiad w&nbsp;jasnej jadalni na&nbsp;ok.&nbsp;30 osób: domowe zupy, mięsa, dodatki i&nbsp;osobne propozycje, które naprawdę lubią dzieci.</p>
+          </li>
+          <li>
+            <div class="time">03 · Deser i&nbsp;plener</div>
+            <h3>Tort, kawa i&nbsp;rodzinne zdjęcia</h3>
+            <p>Kącik kawowy z&nbsp;ekspresem, stół słodki i&nbsp;tort komunijny. W&nbsp;międzyczasie sesja zdjęciowa na&nbsp;łące oraz bezpieczna zabawa dzieci w&nbsp;ogrodzie.</p>
+          </li>
+          <li>
+            <div class="time">04 · Wieczór</div>
+            <h3>Bez wypraszania — z&nbsp;opcją noclegu</h3>
+            <p>Kolacja na&nbsp;ciepło lub&nbsp;zimna płyta w&nbsp;swobodnej atmosferze. Chrzestni i&nbsp;rodzina z&nbsp;daleka mogą zostać na&nbsp;noc w&nbsp;naszych 3 apartamentach.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- KORZYŚCI -->
+    <section class="linen" id="atuty">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Dlaczego rodzice wybierają Giławy</p>
+          <h2>Wszystko, czego potrzeba na&nbsp;udane przyjęcie dla&nbsp;ok.&nbsp;30 osób</h2>
+          <p>Łączymy domowe ciepło i&nbsp;warmińską gościnność z&nbsp;wygodą miejsca przygotowanego specjalnie na&nbsp;kameralne uroczystości.</p>
+        </div>
+        <div class="benefits">
+          <div class="benefit">
+            <div class="ico"><svg class="icon"><use href="#i-users"/></svg></div>
+            <h3>Wyłączność do&nbsp;ok.&nbsp;30 gości</h3>
+            <p>Jedno przyjęcie w&nbsp;dniu — nikt obcy nie&nbsp;wchodzi na&nbsp;salę ani&nbsp;do&nbsp;ogrodu. Pełna prywatność i&nbsp;swoboda dla&nbsp;Waszej rodziny.</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg class="icon"><use href="#i-utensils"/></svg></div>
+            <h3>Domowa kuchnia z&nbsp;eko produktów</h3>
+            <p>Posiłki przygotowane na&nbsp;miejscu, chwalone przez gości za&nbsp;smak i&nbsp;jakość (w&nbsp;tym menu dostosowane do&nbsp;najmłodszych).</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg class="icon"><use href="#i-leaf"/></svg></div>
+            <h3>Ogród, taras i&nbsp;bezpieczna przestrzeń</h3>
+            <p>Zadaszony taras na&nbsp;każdą majową pogodę i&nbsp;duży zielony teren, po&nbsp;którym dzieci mogą biegać bezpiecznie z&nbsp;dala od&nbsp;ruchu ulicznego.</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg class="icon"><use href="#i-home"/></svg></div>
+            <h3>Przestronny parter bez&nbsp;ścisku</h3>
+            <p>Na&nbsp;czas uroczystości całą przestrzeń parteru ustawiamy pod&nbsp;wspólne stoły dla&nbsp;ok.&nbsp;30 osób — wygodnie, jasno i&nbsp;z&nbsp;bezpośrednim wyjściem na&nbsp;taras.</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg class="icon"><use href="#i-bed"/></svg></div>
+            <h3>Noclegi dla&nbsp;gości z&nbsp;daleka</h3>
+            <p>Trzy niezależne, dwupokojowe apartamenty z&nbsp;prywatnymi łazienkami (do&nbsp;14 miejsc) — rodzina z&nbsp;innego miasta nie&nbsp;musi szukać hotelu.</p>
+          </div>
+          <div class="benefit">
+            <div class="ico"><svg class="icon"><use href="#i-car"/></svg></div>
+            <h3>Szybki dojazd w&nbsp;promieniu 30 km</h3>
+            <p>Dogodne położenie między Olsztynem, Pasymiem, Barczewem i&nbsp;Szczytnem oraz duży, bezpłatny parking bezpośrednio przy domu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOKALIZACJA 30 KM -->
+    <section id="dojazd">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Lokalizacja · Promień 30 km</p>
+          <h2>Blisko kościoła — szybki dojazd z&nbsp;całej okolicy</h2>
+          <p>Agroturystyka Giławy (Giławy 75, gm.&nbsp;Purda) leży w&nbsp;zielonym sercu Warmii, na&nbsp;styku z&nbsp;Mazurami. Po&nbsp;Mszy Świętej goście dojadą do&nbsp;nas w&nbsp;kilkanaście minut — bez&nbsp;miejskich korków i&nbsp;szukania parkingu.</p>
+        </div>
+        <div class="loc-grid">
+          <div>
+            <div class="town-grid">
+              <div class="town">
+                <div><strong>Giławy i&nbsp;okolice</strong><small>Parafia św. Jana Chrzciciela, Nerwik, Gąsiorowo</small></div>
+                <span class="town-time">2–5 min</span>
+              </div>
+              <div class="town">
+                <div><strong>Pasym i&nbsp;gmina Pasym</strong><small>Tylkowo, Leleszki, Rusek Wielki (~10 km)</small></div>
+                <span class="town-time">ok. 10 min</span>
+              </div>
+              <div class="town">
+                <div><strong>Purda i&nbsp;Klebark Wielki</strong><small>Marcinkowo, Prejłowo, Patryki (~14–18 km)</small></div>
+                <span class="town-time">ok. 15 min</span>
+              </div>
+              <div class="town">
+                <div><strong>Barczewo i&nbsp;Wójtowo</strong><small>Cała gmina Barczewo (~15–20 km)</small></div>
+                <span class="town-time">15–20 min</span>
+              </div>
+              <div class="town">
+                <div><strong>Dźwierzuty</strong><small>Sąsiednia gmina mazurska (~19 km)</small></div>
+                <span class="town-time">ok. 20 min</span>
+              </div>
+              <div class="town">
+                <div><strong>Szczytno i&nbsp;okolice</strong><small>Wygodny dojazd przez Pasym (~24 km)</small></div>
+                <span class="town-time">20–25 min</span>
+              </div>
+              <div class="town">
+                <div><strong>Olsztyn</strong><small>Pieczewo, Jaroty, Nagórki, Mazurskie (~22–28 km)</small></div>
+                <span class="town-time">ok. 25 min</span>
+              </div>
+              <div class="town">
+                <div><strong>Biskupiec</strong><small>Dojazd z&nbsp;północnego wschodu (~27 km)</small></div>
+                <span class="town-time">25–30 min</span>
+              </div>
+            </div>
+            <p class="loc-note">📍 Dokładny adres do&nbsp;nawigacji i&nbsp;na&nbsp;zaproszenia komunijne: <strong>Giławy 75, 11-030 Giławy (gm.&nbsp;Purda)</strong>. Na&nbsp;posesji czeka bezpłatny parking dla&nbsp;wszystkich samochodów gości.</p>
+          </div>
+          <div class="map-box">
+            <iframe
+              title="Mapa dojazdu — Agroturystyka Giławy"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=20.620%2C53.630%2C20.960%2C53.820&amp;layer=mapnik&amp;marker=53.7265%2C20.7880"
+              loading="lazy"></iframe>
+            <a class="btn btn-line map-link" target="_blank" rel="noopener"
+               href="https://www.google.com/maps/dir/?api=1&amp;destination=53.72653514861423%2C20.7880292513791">
+              <svg class="icon"><use href="#i-pin"/></svg> Wyznacz trasę do&nbsp;Giław w&nbsp;Google Maps →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="linen" id="galeria">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Zobaczcie nasz dom i&nbsp;otoczenie</p>
+          <h2>Prawdziwe zdjęcia siedliska w&nbsp;Giławach</h2>
+          <p>Kliknij wybrane zdjęcie, aby obejrzeć je w&nbsp;powiększeniu.</p>
+        </div>
+        <div class="gallery">
+          <figure class="g-card wide">
+            <img src="assets/img/foto-06.webp" width="1920" height="1440" alt="Dom Agroturystyka Giławy wśród zielonych łąk i lasu" loading="lazy">
+            <figcaption>Dom w&nbsp;otoczeniu majowej zieleni — pełna prywatność i&nbsp;piękne tło do&nbsp;zdjęć</figcaption>
+          </figure>
+          <figure class="g-card crop-left">
+            <img src="assets/img/foto-05.webp" width="900" height="1600" alt="Zadaszony taras z kwiatami i wejście do domu" loading="lazy">
+            <figcaption>Zadaszony taras w&nbsp;kwiatach — osłona przed słońcem i&nbsp;wiosennym deszczem</figcaption>
+          </figure>
+          <figure class="g-card">
+            <img src="assets/img/foto-03.webp" width="1920" height="1440" alt="Jasna jadalnia ze stołami, świecznikami i kącikiem kawowym" loading="lazy">
+            <figcaption>Jasna jadalnia ze&nbsp;świecznikami i&nbsp;kącikiem kawowym na&nbsp;ok.&nbsp;30 osób</figcaption>
+          </figure>
+          <figure class="g-card">
+            <img src="assets/img/sylwester/lazienka.webp" width="576" height="768" alt="Nowoczesna prywatna łazienka z prysznicem i oknem dachowym" loading="lazy">
+            <figcaption>Nowoczesne prywatne łazienki w&nbsp;apartamentach dla&nbsp;gości z&nbsp;daleka</figcaption>
+          </figure>
+          <figure class="g-card">
+            <img src="assets/img/foto-08.webp" width="476" height="476" alt="Widok na zieloną łąkę i sosnowy las w Giławach" loading="lazy">
+            <figcaption>Łąki i&nbsp;sosnowy las za&nbsp;oknem — cisza zamiast miejskiego zgiełku</figcaption>
+          </figure>
+          <figure class="g-card">
+            <img src="assets/img/foto-01.webp" width="1920" height="1440" alt="Jasna sypialnia w apartamencie dla gości z daleka" loading="lazy">
+            <figcaption>Opcjonalne noclegi dla&nbsp;gości z&nbsp;daleka — 3 apartamenty (do&nbsp;14 miejsc)</figcaption>
+          </figure>
+          <figure class="g-card">
+            <img src="assets/img/foto-09.webp" width="476" height="476" alt="Sypialnia z balkonem i widokiem na ogród" loading="lazy">
+            <figcaption>Przytulne pokoje z&nbsp;wyjściem na&nbsp;balkon i&nbsp;prywatnymi łazienkami</figcaption>
+          </figure>
+          <figure class="g-card">
+            <img src="assets/img/foto-04.webp" width="1440" height="1920" alt="Wnętrze parteru z kominkiem i drewnianymi schodami" loading="lazy">
+            <figcaption>Ciepłe, jasne wnętrza parteru z&nbsp;kominkiem na&nbsp;chłodniejszy majowy wieczór</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPINIE -->
+    <section class="dark" id="opinie">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Zaufanie rodzin</p>
+          <h2>Goście chwalą nasze jedzenie, opiekę i&nbsp;menu dla&nbsp;dzieci</h2>
+        </div>
+        <div class="score">
+          <b>9,4</b>
+          <span>ocena gości<br>20 opinii na&nbsp;Booking.com</span>
+        </div>
+        <div class="reviews">
+          <figure class="review">
+            <blockquote>„Przepyszne śniadanka! Menu dla&nbsp;dzieci! Przepiękna okolica.”</blockquote>
+            <footer><b>Sylwia</b> · rodzina z&nbsp;dziećmi · 10/10</footer>
+          </figure>
+          <figure class="review">
+            <blockquote>„Wszystko ok.&nbsp;Miejsce piękne, gospodarze przemili, super jedzenie.”</blockquote>
+            <footer><b>Maciej</b> · gość obiektu · 10/10</footer>
+          </figure>
+          <figure class="review">
+            <blockquote>„Rewelka, super posiłki, opieka oraz otoczenie.”</blockquote>
+            <footer><b>Aleksander</b> · gość obiektu · 10/10</footer>
+          </figure>
+          <figure class="review">
+            <blockquote>„Okolica, siedlisko, przemili gospodarze.”</blockquote>
+            <footer><b>Anna</b> · rodzina z&nbsp;małymi dziećmi · 10/10</footer>
+          </figure>
+        </div>
+        <p class="center" style="margin-top:1.6rem;font-size:.85rem;opacity:.68">Autentyczne cytaty z&nbsp;opinii gości opublikowanych w&nbsp;serwisie Booking.com.</p>
+      </div>
+    </section>
+
+    <!-- OFERTA -->
+    <section class="linen" id="oferta">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Oferta komunijna</p>
+          <h2>Jedna rodzina, jeden dzień — przyjęcie szyte na&nbsp;miarę</h2>
+          <p>Każde przyjęcie komunijne ustalamy bezpośrednio z&nbsp;rodzicami — tak, aby pasowało do&nbsp;liczby gości, wieku dzieci i&nbsp;Waszego budżetu.</p>
+        </div>
+        <div class="offer">
+          <div class="offer-card">
+            <span class="ribbon">Komunie 2027 / 2028 · Na wyłączność</span>
+            <h3>Kameralne przyjęcie komunijne (ok.&nbsp;30 osób)</h3>
+            <p class="sub">Agroturystyka Giławy · Giławy 75 (gm.&nbsp;Purda) · 10–25 min z&nbsp;Pasymia, Barczewa, Szczytna i&nbsp;Olsztyna</p>
+            <ul class="checks">
+              <li><svg class="icon"><use href="#i-check"/></svg> <strong>Obiekt na&nbsp;wyłączność:</strong> cały parter zaaranżowany pod&nbsp;przyjęcie bez&nbsp;ścisku, zadaszony taras i&nbsp;zielony ogród tylko dla&nbsp;Was</li>
+              <li><svg class="icon"><use href="#i-check"/></svg> <strong>Domowe menu komunijne:</strong> uroczysty obiad, przystawki, kawa/herbata, miejsce na&nbsp;tort oraz dania lubiane przez dzieci</li>
+              <li><svg class="icon"><use href="#i-check"/></svg> <strong>Naturalna kuchnia:</strong> świeże składniki z&nbsp;naszego ekologicznego gospodarstwa (własne jajka i&nbsp;warzywa)</li>
+              <li><svg class="icon"><use href="#i-check"/></svg> <strong>Komfort i&nbsp;spokój:</strong> bezpłatny parking przy domu, bezpieczny trawnik dla&nbsp;dzieci, brak limitu „na&nbsp;3 godziny”</li>
+              <li><svg class="icon"><use href="#i-check"/></svg> <strong>Opcja noclegu:</strong> 3 dwupokojowe apartamenty z&nbsp;łazienkami (do&nbsp;14 miejsc) dla&nbsp;gości przyjezdnych</li>
+            </ul>
+            <div class="price-note"><b>Wycena indywidualna od&nbsp;osoby</b> — zależy od&nbsp;wybranego wariantu menu, liczby dorosłych i&nbsp;dzieci oraz ewentualnych noclegów. Zadzwońcie lub&nbsp;napiszcie datę komunii — przygotujemy konkretną propozycję i&nbsp;menu.</div>
+            <a class="btn btn-forest btn-lg" href="#rezerwacja"><svg class="icon"><use href="#i-cal"/></svg> Zapytaj o&nbsp;wolny termin i&nbsp;menu</a>
+          </div>
+          <div class="offer-side">
+            <h3>Porozmawiaj bezpośrednio z&nbsp;gospodarzem</h3>
+            <p>W&nbsp;maju weekendów komunijnych jest tylko kilka, a&nbsp;my organizujemy <strong>jedno przyjęcie dziennie</strong>. Warto wcześniej sprawdzić dostępność daty i&nbsp;przyjechać obejrzeć dom oraz ogród na&nbsp;żywo.</p>
+            <ul class="side-list">
+              <li><svg class="icon"><use href="#i-check"/></svg> Możliwość obejrzenia siedliska przed decyzją</li>
+              <li><svg class="icon"><use href="#i-check"/></svg> Elastyczne menu (także diety i&nbsp;dania dla&nbsp;dzieci)</li>
+              <li><svg class="icon"><use href="#i-check"/></svg> Bezpośredni kontakt — bez&nbsp;pośredników</li>
+            </ul>
+            <a class="btn btn-gold" href="tel:+48512720750"><svg class="icon"><use href="#i-phone"/></svg> Zadzwoń: 512 720 750</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REZERWACJA -->
+    <section id="rezerwacja">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Rezerwacja bezpośrednio u&nbsp;właścicieli</p>
+          <h2>Jak zarezerwować termin komunii?</h2>
+          <p>Wystarczy krótki telefon, SMS albo e-mail — od&nbsp;razu potwierdzimy dostępność wybranej niedzieli lub&nbsp;soboty.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Podaj datę i&nbsp;liczbę gości</h3>
+            <p>Zadzwoń lub&nbsp;kliknij gotowy SMS poniżej — napisz planowaną datę komunii, orientacyjną liczbę osób (ok.&nbsp;20–30) oraz czy&nbsp;potrzebne będą noclegi.</p>
+          </li>
+          <li>
+            <h3>Spotkanie i&nbsp;ustalenie menu</h3>
+            <p>Zapraszamy na&nbsp;krótką wizytę w&nbsp;Giławach. Zobaczycie jadalnię, taras i&nbsp;ogród oraz wspólnie dopracujemy menu i&nbsp;wycenę.</p>
+          </li>
+          <li>
+            <h3>Rezerwacja daty na&nbsp;wyłączność</h3>
+            <p>Po&nbsp;wpłacie zadatku termin zostaje zamknięty — cały dom i&nbsp;ogród w&nbsp;dniu komunii należą wyłącznie do&nbsp;Waszej rodziny.</p>
+          </li>
+        </ol>
+        <div class="contact-cards">
+          <a class="ccard" href="tel:+48512720750">
+            <svg class="icon"><use href="#i-phone"/></svg>
+            <b>Zadzwoń teraz</b>
+            <span>+48 512 720 750</span>
+          </a>
+          <a class="ccard" href="sms:+48512720750?&amp;body=Dzie%C5%84%20dobry%2C%20chc%C4%99%20zapyta%C4%87%20o%20wolny%20termin%20na%20przyj%C4%99cie%20komunijne%20w%20Agroturystyce%20Gi%C5%82awy.%20Data%20komunii%3A%20...%20Liczba%20go%C5%9Bci%20(doro%C5%9Bli%2Fdzieci)%3A%20...%20Prosz%C4%99%20o%20informacj%C4%99%20o%20dost%C4%99pno%C5%9Bci%20i%20ofercie.">
+            <svg class="icon"><use href="#i-msg"/></svg>
+            <b>Wyślij SMS</b>
+            <span>otwórz gotową wiadomość</span>
+          </a>
+          <a class="ccard" href="mailto:zedkrzeminski@poczta.onet.pl?subject=Zapytanie%20o%20przyj%C4%99cie%20komunijne%20-%20Agroturystyka%20Gi%C5%82awy&amp;body=Dzie%C5%84%20dobry%2C%0A%0Achc%C4%99%20zapyta%C4%87%20o%20organizacj%C4%99%20przyj%C4%99cia%20komunijnego%20w%20Agroturystyce%20Gi%C5%82awy.%0A%0APlanowana%20data%20komunii%3A%20%0ALiczba%20go%C5%9Bci%20(w%20tym%20dzieci)%3A%20%0ACzy%20potrzebne%20noclegi%3A%20Tak%20%2F%20Nie%0ATelefon%20kontaktowy%3A%20%0A%0AProsz%C4%99%20o%20informacj%C4%99%20o%20dost%C4%99pno%C5%9Bci%20terminu%20oraz%20propozycj%C4%99%20menu%20i%20wyceny.">
+            <svg class="icon"><use href="#i-mail"/></svg>
+            <b>Napisz e-mail</b>
+            <span>zedkrzeminski@poczta.onet.pl</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="linen" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Najczęstsze pytania rodziców</p>
+          <h2>Wszystko, co&nbsp;warto wiedzieć przed rezerwacją komunii</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Ile maksymalnie osób możemy zaprosić na&nbsp;przyjęcie komunijne?</summary>
+            <p>Komfortowo obsługujemy kameralne przyjęcia komunijne <strong>do&nbsp;ok.&nbsp;30 osób</strong>. Na&nbsp;czas uroczystości ustawiamy stoły w&nbsp;przestronnej części parteru tak, aby było wygodnie i&nbsp;bez&nbsp;ścisku, a&nbsp;wszyscy goście mieli swobodne wyjście na&nbsp;zadaszony taras i&nbsp;do&nbsp;ogrodu.</p>
+          </details>
+          <details>
+            <summary>Czy w&nbsp;dniu komunii odbywa się tylko nasze przyjęcie?</summary>
+            <p>Tak — dajemy Wam <strong>100% wyłączności</strong>. Nie organizujemy dwóch komunii jednocześnie, więc nikt obcy nie&nbsp;dzieli z&nbsp;Wami sali, tarasu ani&nbsp;ogrodu.</p>
+          </details>
+          <details>
+            <summary>Jak wygląda menu komunijne i&nbsp;czy przygotowujecie dania dla&nbsp;dzieci?</summary>
+            <p>Menu ustalamy wspólnie z&nbsp;rodzicami. Bazujemy na&nbsp;domowej, świeżej kuchni z&nbsp;produktów z&nbsp;naszego ekologicznego gospodarstwa. Zawsze dbamy też o&nbsp;dania lubiane przez najmłodszych oraz indywidualne potrzeby (np.&nbsp;dania wegetariańskie lub&nbsp;bez&nbsp;wybranych alergenów).</p>
+          </details>
+          <details>
+            <summary>Czy możemy przywieźć własny tort komunijny lub&nbsp;dekoracje stołu?</summary>
+            <p>Oczywiście! Chętnie pomożemy w&nbsp;przygotowaniu odświętnego nakrycia stołu, a&nbsp;jeśli chcecie przynieść własny tort komunijny, ciasta lub&nbsp;ulubione dekoracje florystyczne — bez&nbsp;problemu ustalimy wszystkie szczegóły.</p>
+          </details>
+          <details>
+            <summary>Czy rodzina przyjeżdżająca z&nbsp;daleka może zostać u&nbsp;Was na&nbsp;noc?</summary>
+            <p>Tak! Na&nbsp;piętrze dysponujemy 3 niezależnymi, dwupokojowymi apartamentami z&nbsp;prywatnymi łazienkami (łącznie do&nbsp;14 miejsc noclegowych). Rodzina z&nbsp;innych miast może zostać po&nbsp;przyjęciu i&nbsp;zjeść następnego ranka domowe śniadanie.</p>
+          </details>
+          <details>
+            <summary>Co w&nbsp;przypadku deszczu lub&nbsp;chłodniejszego majowego dnia?</summary>
+            <p>Jesteśmy przygotowani na&nbsp;każdą pogodę: przyjęcie odbywa się w&nbsp;jasnej, ciepłej sali na&nbsp;parterze (w&nbsp;razie chłodu możemy rozpalić kominek!), a&nbsp;duży taras przy domu jest zadaszony.</p>
+          </details>
+          <details>
+            <summary>Gdzie dokładnie leżą Giławy i&nbsp;czy można wcześniej obejrzeć obiekt?</summary>
+            <p>Adres to&nbsp;<strong>Giławy 75, 11-030 Giławy (gm.&nbsp;Purda)</strong> — ok.&nbsp;10 min z&nbsp;Pasymia, 15 min z&nbsp;Purdy i&nbsp;Klebarka, 15–20 min z&nbsp;Barczewa, 20 min z&nbsp;Dźwierzut, 20–25 min ze&nbsp;Szczytna i&nbsp;ok.&nbsp;25 min z&nbsp;Olsztyna (Pieczewo/Jaroty). Zapraszamy wcześniej na&nbsp;kawę i&nbsp;obejrzenie miejsca — wystarczy zadzwonić pod&nbsp;<a href="tel:+48512720750" style="color:var(--forest);font-weight:700;text-decoration:underline">+48 512 720 750</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final" id="final">
+      <div class="container">
+        <p class="kicker">Wolne terminy 2027 / 2028</p>
+        <h2>W&nbsp;maju jest tylko kilka niedziel — sprawdź, czy&nbsp;Wasza data jest wolna</h2>
+        <p>Zadzwoń lub&nbsp;napisz krótki SMS. Chętnie opowiemy o&nbsp;menu, wolnych terminach i&nbsp;zaprosimy do&nbsp;Giław na&nbsp;obejrzenie domu oraz ogrodu.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold btn-lg" href="tel:+48512720750"><svg class="icon"><use href="#i-phone"/></svg> Zadzwoń: 512 720 750</a>
+          <a class="btn btn-ghost btn-lg" href="#rezerwacja"><svg class="icon"><use href="#i-cal"/></svg> Wyślij SMS lub&nbsp;e-mail</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="container">
+      <div>© Agroturystyka&nbsp;Giławy · Giławy 75, 11-030 Giławy (gm.&nbsp;Purda, Warmia)</div>
+      <div><a href="index.html">Strona główna gospodarstwa</a> · <a href="tel:+48512720750">+48 512 720 750</a> · <a href="mailto:zedkrzeminski@poczta.onet.pl">zedkrzeminski@poczta.onet.pl</a></div>
+    </div>
+  </footer>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+    <button class="lb-close" id="lb-close" aria-label="Zamknij podgląd">×</button>
+    <img id="lb-img" src="" alt="">
+    <div class="lb-cap" id="lb-cap"></div>
+  </div>
+
+  <nav class="mbar" aria-label="Szybki kontakt">
+    <a class="btn btn-ghost" href="tel:+48512720750"><svg class="icon"><use href="#i-phone"/></svg> Zadzwoń</a>
+    <a class="btn btn-gold" href="#rezerwacja"><svg class="icon"><use href="#i-cal"/></svg> Zapytaj o&nbsp;termin</a>
+  </nav>
+
+  <!-- GoatCounter analytics -->
+  <script data-goatcounter="https://gilawy.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    (function () {
+      function phCapture(eventName, props) {
+        if (window.posthog && typeof window.posthog.capture === 'function') {
+          window.posthog.capture(eventName, props || {});
+        }
+      }
+
+      document.querySelectorAll('a[href^="tel:"], a[href^="sms:"], a[href^="mailto:"]').forEach(function (a) {
+        a.addEventListener('click', function () {
+          var method = a.getAttribute('href').split(':')[0];
+          if (typeof gtag === 'function') {
+            gtag('event', 'conversion', { 'send_to': 'AW-17350584286/WjOwCJOV_b8cEN7Ps9FA' });
+            gtag('event', 'komunia_kontakt', { method: method });
+          }
+          phCapture('komunia_kontakt', {
+            method: method,
+            href: a.getAttribute('href'),
+            label: (a.textContent || '').trim()
+          });
+        });
+      });
+
+      document.querySelectorAll('.map-link').forEach(function (a) {
+        a.addEventListener('click', function () {
+          phCapture('klik_mapa_trasa', { strona: 'komunia', href: a.getAttribute('href') });
+        });
+      });
+
+      var lb = document.getElementById('lb');
+      var lbImg = document.getElementById('lb-img');
+      var lbCap = document.getElementById('lb-cap');
+      var lbClose = document.getElementById('lb-close');
+      function closeLb() {
+        if (!lb) return;
+        lb.classList.remove('open');
+        lbImg.src = '';
+      }
+      document.querySelectorAll('.g-card, .story-photos img').forEach(function (item) {
+        item.addEventListener('click', function () {
+          var img = item.tagName === 'IMG' ? item : item.querySelector('img');
+          var cap = item.tagName === 'FIGURE' && item.querySelector('figcaption')
+            ? item.querySelector('figcaption').textContent.trim()
+            : (img ? img.alt : '');
+          if (img && lb) {
+            lbImg.src = img.getAttribute('src');
+            lbImg.alt = img.alt || '';
+            lbCap.textContent = cap || '';
+            lb.classList.add('open');
+            phCapture('klik_galeria_komunia', { src: img.getAttribute('src'), alt: cap });
+          }
+        });
+      });
+      if (lbClose) lbClose.addEventListener('click', closeLb);
+      if (lb) lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
+
+      document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function () {
+          phCapture('klik_nawigacja', {
+            cel: a.getAttribute('href'),
+            label: (a.textContent || '').trim()
+          });
+        });
+      });
+
+      document.querySelectorAll('.faq details').forEach(function (det) {
+        det.addEventListener('toggle', function () {
+          if (det.open) {
+            var q = det.querySelector('summary') ? det.querySelector('summary').textContent.trim() : '';
+            phCapture('klik_faq', { pytanie: q });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
