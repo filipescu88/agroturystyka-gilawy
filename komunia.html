@@ -74,7 +74,7 @@
         "image": "https://gilawy.pl/assets/img/foto-06.webp",
         "url": "https://gilawy.pl/komunia.html",
         "telephone": "+48512720750",
-        "email": "zedkrzeminski@poczta.onet.pl",
+        "email": "agroturystyka@gilawy.pl",
         "maximumAttendeeCapacity": 30,
         "address": {
           "@type": "PostalAddress",
@@ -323,6 +323,28 @@
     .ccard b { font-size: 1.05rem; }
     .ccard span { font-size: .9rem; opacity: .82; }
 
+    /* contact form */
+    .cf-card { margin-top: 2rem; background: var(--white); border-radius: 22px; padding: 2rem; box-shadow: 0 12px 32px rgba(36,51,38,.09); border: 1px solid rgba(36,51,38,.1); max-width: 780px; margin-inline: auto; }
+    .cf-card h3 { font-size: 1.65rem; margin-bottom: .35rem; color: var(--forest); }
+    .cf-card .cf-lead { color: var(--muted); font-size: .95rem; margin-bottom: 1.4rem; }
+    .cf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+    .cf-field { display: flex; flex-direction: column; gap: .3rem; }
+    .cf-field--full { grid-column: 1 / -1; }
+    .cf-field label { font-size: .85rem; font-weight: 700; color: var(--forest); }
+    .cf-field input, .cf-field select, .cf-field textarea { width: 100%; font-family: var(--sans); font-size: .96rem; color: var(--ink); background: var(--cream); border: 1.5px solid rgba(36,51,38,.18); border-radius: 10px; padding: .7rem .85rem; transition: border-color .2s, box-shadow .2s, background .2s; }
+    .cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus { outline: none; background: #fff; border-color: var(--sage); box-shadow: 0 0 0 3px rgba(105,127,98,.18); }
+    .cf-field textarea { resize: vertical; min-height: 88px; }
+    .cf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
+    .cf-actions { margin-top: 1.1rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+    .cf-note { font-size: .82rem; color: var(--muted); flex: 1; min-width: 200px; }
+    .cf-status { margin-top: 1rem; font-size: .93rem; line-height: 1.5; border-radius: 10px; }
+    .cf-status:empty { display: none; }
+    .cf-status--pending { background: var(--linen); color: var(--forest); padding: .75rem 1rem; }
+    .cf-status--ok { background: #e8f3e8; color: #244a29; border: 1px solid #b8d8ba; padding: .85rem 1rem; }
+    .cf-status--error { background: #fbeae7; color: #7f291c; border: 1px solid #ebbdb5; padding: .85rem 1rem; }
+    .cf-status a { color: inherit; font-weight: 700; text-decoration: underline; }
+    .cf-card .btn[disabled] { opacity: .65; cursor: wait; transform: none; }
+
     /* faq */
     .faq { max-width: 790px; margin: 0 auto; display: grid; gap: .8rem; }
     .faq details { background: var(--white); border-radius: 14px; padding: 1.15rem 1.45rem; box-shadow: 0 4px 12px rgba(36,51,38,.06); border: 1px solid rgba(36,51,38,.06); }
@@ -363,7 +385,8 @@
       .pillar { padding: .65rem .6rem; }
       .pillar b { font-size: 1.3rem; }
       .pillar span { font-size: .74rem; }
-      .timeline, .benefits, .reviews, .steps, .contact-cards, .gallery, .town-grid { grid-template-columns: 1fr; }
+      .timeline, .benefits, .reviews, .steps, .contact-cards, .gallery, .town-grid, .cf-grid { grid-template-columns: 1fr; }
+      .cf-card { padding: 1.5rem 1.25rem; }
       .g-card.wide { grid-column: span 1; }
       .g-card.wide img { aspect-ratio: 4/3; }
       .offer-card { padding: 2rem 1.4rem; }
@@ -738,11 +761,60 @@
             <b>Wyślij SMS</b>
             <span>otwórz gotową wiadomość</span>
           </a>
-          <a class="ccard" href="mailto:zedkrzeminski@poczta.onet.pl?subject=Zapytanie%20o%20przyj%C4%99cie%20komunijne%20-%20Agroturystyka%20Gi%C5%82awy&amp;body=Dzie%C5%84%20dobry%2C%0A%0Achc%C4%99%20zapyta%C4%87%20o%20organizacj%C4%99%20przyj%C4%99cia%20komunijnego%20w%20Agroturystyce%20Gi%C5%82awy.%0A%0APlanowana%20data%20komunii%3A%20%0ALiczba%20go%C5%9Bci%20(w%20tym%20dzieci)%3A%20%0ACzy%20potrzebne%20noclegi%3A%20Tak%20%2F%20Nie%0ATelefon%20kontaktowy%3A%20%0A%0AProsz%C4%99%20o%20informacj%C4%99%20o%20dost%C4%99pno%C5%9Bci%20terminu%20oraz%20propozycj%C4%99%20menu%20i%20wyceny.">
+          <a class="ccard" href="mailto:agroturystyka@gilawy.pl?subject=Zapytanie%20o%20przyj%C4%99cie%20komunijne%20-%20Agroturystyka%20Gi%C5%82awy&amp;body=Dzie%C5%84%20dobry%2C%0A%0Achc%C4%99%20zapyta%C4%87%20o%20organizacj%C4%99%20przyj%C4%99cia%20komunijnego%20w%20Agroturystyce%20Gi%C5%82awy.%0A%0APlanowana%20data%20komunii%3A%20%0ALiczba%20go%C5%9Bci%20(w%20tym%20dzieci)%3A%20%0ACzy%20potrzebne%20noclegi%3A%20Tak%20%2F%20Nie%0ATelefon%20kontaktowy%3A%20%0A%0AProsz%C4%99%20o%20informacj%C4%99%20o%20dost%C4%99pno%C5%9Bci%20terminu%20oraz%20propozycj%C4%99%20menu%20i%20wyceny.">
             <svg class="icon"><use href="#i-mail"/></svg>
             <b>Napisz e-mail</b>
-            <span>zedkrzeminski@poczta.onet.pl</span>
+            <span>agroturystyka@gilawy.pl</span>
           </a>
+        </div>
+        <div class="cf-card">
+          <h3>Lub zapytaj o&nbsp;wolny termin komunii przez formularz</h3>
+          <p class="cf-lead">Podaj planowaną datę i&nbsp;liczbę gości — oddzwonimy lub&nbsp;odpiszemy z&nbsp;propozycją menu i&nbsp;wyceną.</p>
+          <form class="js-contact-form" data-source="Komunia" data-gads-event="komunia_kontakt" novalidate>
+            <div class="cf-grid">
+              <div class="cf-field">
+                <label for="kom-name">Imię *</label>
+                <input id="kom-name" type="text" name="name" placeholder="np. Katarzyna" autocomplete="name" required>
+              </div>
+              <div class="cf-field">
+                <label for="kom-phone">Telefon *</label>
+                <input id="kom-phone" type="tel" name="phone" placeholder="np. 600 123 456" autocomplete="tel" required>
+              </div>
+              <div class="cf-field">
+                <label for="kom-email">E-mail (opcjonalnie)</label>
+                <input id="kom-email" type="email" name="email" placeholder="np. kasia@email.pl" autocomplete="email">
+              </div>
+              <div class="cf-field">
+                <label for="kom-date">Planowana data komunii</label>
+                <input id="kom-date" type="text" data-field-label="Data komunii" placeholder="np. 16 maja 2027">
+              </div>
+              <div class="cf-field">
+                <label for="kom-guests">Orientacyjna liczba gości</label>
+                <input id="kom-guests" type="text" data-field-label="Liczba gości" placeholder="np. 25 (w tym 6 dzieci)">
+              </div>
+              <div class="cf-field">
+                <label for="kom-stay">Czy potrzebne noclegi dla rodziny?</label>
+                <select id="kom-stay" data-field-label="Noclegi">
+                  <option value="Do ustalenia">Jeszcze nie wiem / do ustalenia</option>
+                  <option value="Tak">Tak, przydadzą się noclegi</option>
+                  <option value="Nie">Nie, samo przyjęcie</option>
+                </select>
+              </div>
+              <div class="cf-field cf-field--full">
+                <label for="kom-msg">Dodatkowe pytania (np. menu, oględziny obiektu)</label>
+                <textarea id="kom-msg" name="message" rows="3" placeholder="Napisz krótko, co jest dla Was ważne..."></textarea>
+              </div>
+            </div>
+            <div class="cf-hp" aria-hidden="true">
+              <label for="kom-website">Strona WWW</label>
+              <input id="kom-website" type="text" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="cf-actions">
+              <button type="submit" class="btn btn-gold">Sprawdź dostępność terminu</button>
+              <span class="cf-note">Dane wykorzystujemy wyłącznie do&nbsp;odpowiedzi na&nbsp;Twoje zapytanie.</span>
+            </div>
+            <div class="cf-status" role="status" aria-live="polite"></div>
+          </form>
         </div>
       </div>
     </section>
@@ -804,7 +876,7 @@
   <footer class="site">
     <div class="container">
       <div>© Agroturystyka&nbsp;Giławy · Giławy 75, 11-030 Giławy (gm.&nbsp;Purda, Warmia)</div>
-      <div><a href="index.html">Strona główna gospodarstwa</a> · <a href="tel:+48512720750">+48 512 720 750</a> · <a href="mailto:zedkrzeminski@poczta.onet.pl">zedkrzeminski@poczta.onet.pl</a></div>
+      <div><a href="index.html">Strona główna gospodarstwa</a> · <a href="tel:+48512720750">+48 512 720 750</a> · <a href="mailto:agroturystyka@gilawy.pl">agroturystyka@gilawy.pl</a></div>
     </div>
   </footer>
 
@@ -899,5 +971,6 @@
       });
     })();
   </script>
+  <script defer src="assets/js/contact-form.js"></script>
 </body>
 </html>

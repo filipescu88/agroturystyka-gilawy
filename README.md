@@ -18,6 +18,7 @@ w przeglądarce.
 index.html            — strona
 assets/css/style.css  — style (paleta natury / boho)
 assets/js/main.js     — menu mobilne + galeria (lightbox)
+assets/js/contact-form.js — obsługa formularzy kontaktowych (forms-hub)
 assets/img/*.webp     — zdjęcia (zoptymalizowane WebP)
 favicon.ico           — ikona strony (16/32/48 px)
 apple-touch-icon.png  — ikona dla iOS
@@ -27,4 +28,4 @@ apple-touch-icon.png  — ikona dla iOS
 
 - Adres: Giławy 75, 11-030 Giławy (woj. warmińsko-mazurskie)
 - Telefon: +48 512 720 750
-- E-mail: zedkrzeminski@poczta.onet.pl
+- E-mail: agroturystyka@gilawy.pl

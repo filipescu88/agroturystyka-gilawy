@@ -87,7 +87,7 @@
     "url": "https://gilawy.pl/",
     "sameAs": ["https://www.booking.com/hotel/pl/agroturystyka-gilawy.pl.html"],
     "telephone": "+48512720750",
-    "email": "zedkrzeminski@poczta.onet.pl",
+    "email": "agroturystyka@gilawy.pl",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Giławy 75",
@@ -465,23 +465,60 @@
 
   <!-- ===== KONTAKT ===== -->
   <section class="section section-contact" id="kontakt">
-    <div class="container split">
-      <div class="split-text">
-        <p class="kicker">Kontakt i rezerwacja</p>
-        <h2>Zarezerwuj swój wypoczynek</h2>
-        <p>Napisz lub zadzwoń — chętnie odpowiemy na pytania i pomożemy dobrać termin oraz apartament.</p>
-        <ul class="contact-list">
-          <li><span>📍</span> <div><strong>Adres</strong><br>Giławy 75, 11-030 Giławy<br>woj. warmińsko-mazurskie</div></li>
-          <li><span>📞</span> <div><strong>Telefon</strong><br><a href="tel:+48512720750">+48 512 720 750</a></div></li>
-          <li><span>✉️</span> <div><strong>E-mail</strong><br><a href="mailto:zedkrzeminski@poczta.onet.pl">zedkrzeminski@poczta.onet.pl</a></div></li>
-        </ul>
-        <div class="hero-actions">
-          <a href="tel:+48512720750" class="btn btn-primary">Zadzwoń teraz</a>
-          <a href="mailto:zedkrzeminski@poczta.onet.pl?subject=Zapytanie%20o%20rezerwacj%C4%99%20-%20Agroturystyka%20Gi%C5%82awy" class="btn btn-ghost">Napisz e-mail</a>
-          <a href="https://www.booking.com/hotel/pl/agroturystyka-gilawy.pl.html" class="btn btn-ghost js-book-booking" target="_blank" rel="noopener">Zarezerwuj online (Booking)</a>
+    <div class="container">
+      <div class="split">
+        <div class="split-text">
+          <p class="kicker">Kontakt i rezerwacja</p>
+          <h2>Zarezerwuj swój wypoczynek</h2>
+          <p>Napisz przez formularz lub zadzwoń — chętnie odpowiemy na pytania i pomożemy dobrać termin oraz apartament.</p>
+          <ul class="contact-list">
+            <li><span>📍</span> <div><strong>Adres</strong><br>Giławy 75, 11-030 Giławy<br>woj. warmińsko-mazurskie</div></li>
+            <li><span>📞</span> <div><strong>Telefon</strong><br><a href="tel:+48512720750">+48 512 720 750</a></div></li>
+            <li><span>✉️</span> <div><strong>E-mail</strong><br><a href="mailto:agroturystyka@gilawy.pl">agroturystyka@gilawy.pl</a></div></li>
+          </ul>
+          <div class="hero-actions">
+            <a href="tel:+48512720750" class="btn btn-primary">Zadzwoń teraz</a>
+            <a href="mailto:agroturystyka@gilawy.pl?subject=Zapytanie%20o%20rezerwacj%C4%99%20-%20Agroturystyka%20Gi%C5%82awy" class="btn btn-ghost">Napisz e-mail</a>
+            <a href="https://www.booking.com/hotel/pl/agroturystyka-gilawy.pl.html" class="btn btn-ghost js-book-booking" target="_blank" rel="noopener">Zarezerwuj online (Booking)</a>
+          </div>
+        </div>
+        <div class="contact-form-card">
+          <h3>Wyślij szybkie zapytanie</h3>
+          <p class="cf-lead">Odpowiadamy osobiście — bez pośredników i prowizji.</p>
+          <form class="js-contact-form" data-source="Strona główna" data-gads-event="formularz_glowna" novalidate>
+            <div class="cf-grid">
+              <div class="cf-field">
+                <label for="idx-name">Imię *</label>
+                <input id="idx-name" type="text" name="name" placeholder="np. Anna" autocomplete="name" required>
+              </div>
+              <div class="cf-field">
+                <label for="idx-phone">Telefon *</label>
+                <input id="idx-phone" type="tel" name="phone" placeholder="np. 600 123 456" autocomplete="tel" required>
+              </div>
+              <div class="cf-field">
+                <label for="idx-email">E-mail (opcjonalnie)</label>
+                <input id="idx-email" type="email" name="email" placeholder="np. anna@email.pl" autocomplete="email">
+              </div>
+              <div class="cf-field">
+                <label for="idx-dates">Termin i liczba osób</label>
+                <input id="idx-dates" type="text" data-field-label="Termin i osoby" placeholder="np. lipiec, 4 os.">
+              </div>
+              <div class="cf-field cf-field--full">
+                <label for="idx-msg">Wiadomość</label>
+                <textarea id="idx-msg" name="message" rows="3" placeholder="Zapytaj o wolny termin, apartament lub wycenę..."></textarea>
+              </div>
+            </div>
+            <div class="cf-hp" aria-hidden="true">
+              <label for="idx-website">Strona WWW</label>
+              <input id="idx-website" type="text" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Wyślij zapytanie</button>
+            <p class="cf-note">Dane podane w formularzu wykorzystujemy wyłącznie do odpowiedzi na Twoje zapytanie.</p>
+            <div class="cf-status" role="status" aria-live="polite"></div>
+          </form>
         </div>
       </div>
-      <div class="split-media">
+      <div class="contact-map-wrap">
         <iframe
           title="Mapa — Giławy"
           src="https://www.openstreetmap.org/export/embed.html?bbox=20.743%2C53.705%2C20.833%2C53.748&amp;layer=mapnik&amp;marker=53.7265%2C20.7880"
@@ -507,7 +544,7 @@
       </div>
       <div class="footer-contact">
         <a href="tel:+48512720750">📞 +48 512 720 750</a>
-        <a href="mailto:zedkrzeminski@poczta.onet.pl">✉️ zedkrzeminski@poczta.onet.pl</a>
+        <a href="mailto:agroturystyka@gilawy.pl">✉️ agroturystyka@gilawy.pl</a>
       </div>
     </div>
     <div class="container footer-bottom">
@@ -527,6 +564,7 @@
   <a href="tel:+48512720750" class="fab-call" aria-label="Zadzwoń">📞</a>
 
   <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/contact-form.js"></script>
 
   <!-- GoatCounter analytics -->
   <script data-goatcounter="https://gilawy.goatcounter.com/count"
