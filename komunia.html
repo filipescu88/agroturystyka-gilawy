@@ -36,7 +36,9 @@
           ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(function (k) {
             if (params.get(k)) sessionProps[k] = params.get(k);
           });
-          ph.register_for_session(sessionProps);
+          if (Object.keys(sessionProps).length > 0) {
+            ph.register_for_session(sessionProps);
+          }
         } catch (e) {}
       }
     });
@@ -44,24 +46,35 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Przyjęcie Komunijne na&nbsp;Warmii (do&nbsp;30 osób) — Olsztyn, Pasym, Barczewo, Szczytno | Agroturystyka&nbsp;Giławy</title>
-  <meta name="description" content="Kameralne przyjęcie komunijne do ok. 30 osób na wyłączność w Agroturystyce Giławy (10–25 min od Pasymia, Purdy, Barczewa, Szczytna, Dźwierzut, Olsztyna i Biskupca). Przestronna sala jadalniana bez ścisku, zadaszony taras, zielony ogród, domowa kuchnia i opcja noclegu dla rodziny.">
-  <meta name="keywords" content="komunia Olsztyn, przyjęcie komunijne Olsztyn okolice, sala na komunię do 30 osób, komunia Pasym, komunia Barczewo, komunia Szczytno, komunia Purda, komunia Biskupiec, komunia Dźwierzuty, przyjęcie komunijne Warmia, agroturystyka na komunię, kameralna komunia z ogrodem">
-  <meta property="og:title" content="Kameralne Przyjęcie Komunijne na Warmii (ok. 30 osób) — na wyłączność | Agroturystyka Giławy">
-  <meta property="og:description" content="Dom, zadaszony taras i zielony ogród tylko dla Waszej rodziny (ok. 30 gości). Domowa kuchnia, spokój wśród łąk i szybki dojazd z Olsztyna, Pasymia, Barczewa i Szczytna.">
+  <title>Sala na komunię — Olsztyn, Pasym, Barczewo, Szczytno | Giławy</title>
+  <meta name="description" content="Kameralne przyjęcie komunijne do 30 osób na wyłączność w Giławach (10–25 min z Olsztyna, Pasymia, Purdy, Barczewa i Szczytna). Sala, taras, ogród i noclegi.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:site_name" content="Agroturystyka Giławy">
+  <meta property="og:title" content="Sala na komunię pod Olsztynem (do 30 osób) na wyłączność | Agroturystyka Giławy">
+  <meta property="og:description" content="Kameralne przyjęcie komunijne na wyłączność: jasna sala, zadaszony taras, zielony ogród, domowa kuchnia i noclegi. 10–25 min z Pasymia, Purdy, Barczewa, Szczytna i Olsztyna.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gilawy.pl/komunia.html">
   <meta property="og:image" content="https://gilawy.pl/assets/img/foto-06.webp">
+  <meta property="og:image:alt" content="Agroturystyka Giławy — dom i ogród na kameralne przyjęcie komunijne w okolicach Olsztyna">
   <meta property="og:locale" content="pl_PL">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sala na komunię — Olsztyn, Pasym, Barczewo, Szczytno | Giławy">
+  <meta name="twitter:description" content="Kameralne przyjęcie komunijne do 30 osób na wyłączność. Domowa kuchnia, ogród, zadaszony taras i opcja noclegu dla rodziny.">
+  <meta name="twitter:image" content="https://gilawy.pl/assets/img/foto-06.webp">
   <link rel="canonical" href="https://gilawy.pl/komunia.html">
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#243326">
-  <link rel="preload" as="image" href="assets/img/foto-06.webp">
+  <link rel="preload" as="image" href="assets/img/foto-06.webp" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap">
+  </noscript>
 
   <script type="application/ld+json">
   {
@@ -69,13 +82,24 @@
     "@graph": [
       {
         "@type": ["EventVenue", "LodgingBusiness"],
-        "name": "Agroturystyka Giławy — Kameralne Przyjęcia Komunijne na Warmii",
-        "description": "Kameralne przyjęcia komunijne do ok. 30 osób na wyłączność w Giławach (gm. Purda). Przestronna sala jadalniana na parterze, zadaszony taras, zielony ogród, domowe menu z eko gospodarstwa oraz 3 apartamenty noclegowe dla rodziny z daleka.",
-        "image": "https://gilawy.pl/assets/img/foto-06.webp",
+        "@id": "https://gilawy.pl/#venue",
+        "name": "Agroturystyka Giławy — Sala i Przyjęcia Komunijne na Warmii",
+        "alternateName": "Agroturystyka Giławy",
+        "description": "Kameralne przyjęcia komunijne do ok. 30 osób na wyłączność w Giławach (gm. Purda, okolice Olsztyna, Pasymia, Barczewa i Szczytna). Przestronna sala jadalniana na parterze, zadaszony taras, zielony ogród, domowe menu z eko gospodarstwa oraz 3 apartamenty noclegowe dla rodziny z daleka.",
+        "image": [
+          "https://gilawy.pl/assets/img/foto-06.webp",
+          "https://gilawy.pl/assets/img/foto-05.webp",
+          "https://gilawy.pl/assets/img/foto-03.webp"
+        ],
         "url": "https://gilawy.pl/komunia.html",
+        "sameAs": [
+          "https://www.booking.com/hotel/pl/agroturystyka-gilawy.pl.html"
+        ],
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=53.72653514861423%2C20.7880292513791",
         "telephone": "+48512720750",
         "email": "agroturystyka@gilawy.pl",
         "maximumAttendeeCapacity": 30,
+        "numberOfRooms": 3,
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Giławy 75",
@@ -84,15 +108,37 @@
           "addressRegion": "warmińsko-mazurskie",
           "addressCountry": "PL"
         },
-        "areaServed": {
-          "@type": "GeoCircle",
-          "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": 53.726535,
-            "longitude": 20.788029
-          },
-          "geoRadius": "30000"
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.726535,
+          "longitude": 20.788029
         },
+        "areaServed": [
+          {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": 53.726535,
+              "longitude": 20.788029
+            },
+            "geoRadius": "30000"
+          },
+          { "@type": "City", "name": "Olsztyn" },
+          { "@type": "City", "name": "Pasym" },
+          { "@type": "City", "name": "Barczewo" },
+          { "@type": "City", "name": "Szczytno" },
+          { "@type": "City", "name": "Biskupiec" },
+          { "@type": "AdministrativeArea", "name": "Gmina Purda" },
+          { "@type": "AdministrativeArea", "name": "Gmina Dźwierzuty" },
+          { "@type": "Place", "name": "Giławy" },
+          { "@type": "Place", "name": "Klebark Wielki" }
+        ],
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "Sala jadalniana na wyłączność do 30 osób", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Zadaszony taras i zielony ogród", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Bezpłatny parking na posesji", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Noclegi dla gości (3 apartamenty, do 14 osób)", "value": true }
+        ],
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "9.4",
@@ -101,38 +147,87 @@
         }
       },
       {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Agroturystyka Giławy",
+            "item": "https://gilawy.pl/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Przyjęcia komunijne",
+            "item": "https://gilawy.pl/komunia.html"
+          }
+        ]
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Ile osób możemy zaprosić na przyjęcie komunijne w Agroturystyce Giławy?",
+            "name": "Ile maksymalnie osób możemy zaprosić na przyjęcie komunijne?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Obsługujemy kameralne przyjęcia komunijne do ok. 30 osób. Taka wielkość pozwala ustawić stoły na parterze bez ścisku i zachować swobodną, rodzinną atmosferę w jadalni, na zadaszonym tarasie oraz w ogrodzie."
+              "text": "Komfortowo obsługujemy kameralne przyjęcia komunijne do ok. 30 osób. Na czas uroczystości ustawiamy stoły w przestronnej części parteru tak, aby było wygodnie i bez ścisku, a wszyscy goście mieli swobodne wyjście na zadaszony taras i do ogrodu."
             }
           },
           {
             "@type": "Question",
-            "name": "Czy podczas komunii mamy dom i ogród wyłącznie dla siebie?",
+            "name": "Czy w dniu komunii odbywa się tylko nasze przyjęcie?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Tak. W dniu komunii organizujemy tylko jedno przyjęcie — nie dzielicie sali, tarasu ani ogrodu z innymi rodzinami."
+              "text": "Tak — dajemy Wam 100% wyłączności. Nie organizujemy dwóch komunii jednocześnie, więc nikt obcy nie dzieli z Wami sali, tarasu ani ogrodu."
             }
           },
           {
             "@type": "Question",
-            "name": "Jak szybko można dojechać z Olsztyna, Pasymia, Barczewa lub Szczytna?",
+            "name": "Jak wygląda menu komunijne i czy przygotowujecie dania dla dzieci?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Giławy leżą w promieniu 10–30 minut jazdy od Pasymia (ok. 10 min), Purdy i Klebarka Wielkiego (ok. 15 min), Barczewa (ok. 15–20 min), Dźwierzut (ok. 20 min), Szczytna (ok. 20–25 min), Olsztyna (ok. 25 min z Pieczewa i Jarot) oraz Biskupca (ok. 25–30 min)."
+              "text": "Menu ustalamy wspólnie z rodzicami. Bazujemy na domowej, świeżej kuchni z produktów z naszego ekologicznego gospodarstwa. Zawsze dbamy też o dania lubiane przez najmłodszych oraz indywidualne potrzeby (np. dania wegetariańskie lub bez wybranych alergenów)."
             }
           },
           {
             "@type": "Question",
-            "name": "Czy rodzina przyjeżdżająca z daleka może zostać na nocleg?",
+            "name": "Czy możemy przywieźć własny tort komunijny lub dekoracje stołu?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Tak! Na piętrze mamy 3 niezależne, dwupokojowe apartamenty z prywatnymi łazienkami, które pomieszczą do 14 osób. To ogromna wygoda dla chrzestnych, dziadków i bliskich z innych miast."
+              "text": "Oczywiście! Chętnie pomożemy w przygotowaniu odświętnego nakrycia stołu, a jeśli chcecie przynieść własny tort komunijny, ciasta lub ulubione dekoracje florystyczne — bez problemu ustalimy wszystkie szczegóły."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy rodzina przyjeżdżająca z daleka może zostać u Was na noc?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tak! Na piętrze dysponujemy 3 niezależnymi, dwupokojowymi apartamentami z prywatnymi łazienkami (łącznie do 14 miejsc noclegowych). Rodzina z innych miast może zostać po przyjęciu i zjeść następnego ranka domowe śniadanie."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Co w przypadku deszczu lub chłodniejszego majowego dnia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Jesteśmy przygotowani na każdą pogodę: przyjęcie odbywa się w jasnej, ciepłej sali na parterze (w razie chłodu możemy rozpalić kominek!), a duży taras przy domu jest zadaszony."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Gdzie dokładnie leżą Giławy i czy można wcześniej obejrzeć obiekt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Adres to Giławy 75, 11-030 Giławy (gm. Purda) — ok. 10 min z Pasymia, 15 min z Purdy i Klebarka, 15–20 min z Barczewa, 20 min z Dźwierzut, 20–25 min ze Szczytna i ok. 25 min z Olsztyna (Pieczewo/Jaroty). Zapraszamy wcześniej na kawę i obejrzenie miejsca — wystarczy zadzwonić pod +48 512 720 750."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kiedy najlepiej rezerwować salę na komunię 2027/2028 i jak wygląda wycena?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Organizujemy tylko jedno przyjęcie komunijne dziennie, dlatego wolne niedziele majowe warto sprawdzać z wyprzedzeniem. Wycenę przygotowujemy indywidualnie od osoby w zależności od wybranego wariantu menu, liczby dorosłych i dzieci oraz ewentualnych noclegów."
             }
           }
         ]
@@ -203,6 +298,9 @@
     .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(25,38,27,.88) 0%, rgba(28,42,30,.72) 52%, rgba(28,42,30,.38) 100%); }
     .hero .container { position: relative; }
     .hero-inner { max-width: 740px; }
+    .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; font-size: .82rem; color: rgba(255,255,255,.76); margin-bottom: .9rem; }
+    .breadcrumb a { color: rgba(255,255,255,.88); text-decoration: underline; text-underline-offset: 3px; }
+    .breadcrumb a:hover { color: var(--gold-2); }
     .badge { display: inline-flex; align-items: center; gap: .5rem; padding: .45rem 1.05rem; border: 1px solid rgba(230,203,144,.6); border-radius: 999px; color: var(--gold-2); font-size: .84rem; font-weight: 700; letter-spacing: .5px; margin-bottom: 1.3rem; background: rgba(25,38,27,.45); backdrop-filter: blur(4px); }
     .hero h1 { font-size: clamp(2.6rem, 6.4vw, 4.7rem); color: var(--white); margin-bottom: 1.15rem; }
     .hero h1 em { color: var(--gold-2); font-style: italic; }
@@ -331,7 +429,7 @@
     .cf-field { display: flex; flex-direction: column; gap: .3rem; }
     .cf-field--full { grid-column: 1 / -1; }
     .cf-field label { font-size: .85rem; font-weight: 700; color: var(--forest); }
-    .cf-field input, .cf-field select, .cf-field textarea { width: 100%; font-family: var(--sans); font-size: .96rem; color: var(--ink); background: var(--cream); border: 1.5px solid rgba(36,51,38,.18); border-radius: 10px; padding: .7rem .85rem; transition: border-color .2s, box-shadow .2s, background .2s; }
+    .cf-field input, .cf-field select, .cf-field textarea { width: 100%; font-family: var(--sans); font-size: .96rem; color: var(--ink); background: var(--ivory); border: 1.5px solid rgba(36,51,38,.18); border-radius: 10px; padding: .7rem .85rem; transition: border-color .2s, box-shadow .2s, background .2s; }
     .cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus { outline: none; background: #fff; border-color: var(--sage); box-shadow: 0 0 0 3px rgba(105,127,98,.18); }
     .cf-field textarea { resize: vertical; min-height: 88px; }
     .cf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
@@ -434,9 +532,14 @@
     <section class="hero" id="start">
       <div class="container">
         <div class="hero-inner">
+          <nav class="breadcrumb" aria-label="Ścieżka nawigacji">
+            <a href="index.html">Agroturystyka Giławy</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Przyjęcia komunijne</span>
+          </nav>
           <span class="badge"><svg class="icon"><use href="#i-sun"/></svg> Przyjęcia Komunijne 2027 / 2028 · Giławy, Warmia</span>
-          <h1>Kameralne przyjęcie komunijne — <em>cały dom i&nbsp;ogród tylko dla&nbsp;Was</em></h1>
-          <p class="lead">Szukacie spokojnego miejsca na&nbsp;<strong>Pierwszą Komunię Świętą do&nbsp;ok.&nbsp;30 osób</strong> w&nbsp;okolicach Olsztyna, Pasymia, Barczewa lub&nbsp;Szczytna? Zamiast zatłoczonej sali z&nbsp;kilkoma przyjęciami naraz wybierzcie nasze siedlisko w&nbsp;Giławach — przestronną, jasną część jadalnianą bez&nbsp;ścisku, zadaszony taras, zielony ogród i&nbsp;domową kuchnię na&nbsp;wyłączność.</p>
+          <h1>Kameralne przyjęcie komunijne — <em>sala i&nbsp;ogród na&nbsp;wyłączność pod&nbsp;Olsztynem</em></h1>
+          <p class="lead">Szukacie spokojnego lokalu lub&nbsp;agroturystyki na&nbsp;<strong>Pierwszą Komunię Świętą do&nbsp;ok.&nbsp;30 osób</strong> w&nbsp;okolicach Olsztyna, Pasymia, Purdy, Barczewa lub&nbsp;Szczytna? Zamiast zatłoczonej sali z&nbsp;kilkoma przyjęciami naraz wybierzcie nasze siedlisko w&nbsp;Giławach — przestronną, jasną część jadalnianą bez&nbsp;ścisku, zadaszony taras, zielony ogród i&nbsp;domową kuchnię na&nbsp;wyłączność.</p>
 
           <div class="hero-pillars" aria-label="Najważniejsze atuty oferty komunijnej">
             <div class="pillar"><b>ok. 30</b><span>gości w&nbsp;komforcie</span></div>
@@ -463,16 +566,16 @@
       <div class="container story">
         <div class="story-text">
           <p class="kicker">Komunia bez&nbsp;pośpiechu i&nbsp;tłoku</p>
-          <h2>Uroczysty obiad przy wspólnym stole, a&nbsp;za&nbsp;drzwiami majowa zieleń</h2>
+          <h2>Uroczysty obiad komunijny przy wspólnym stole, a&nbsp;za&nbsp;drzwiami majowa zieleń</h2>
           <p>Dzień Pierwszej Komunii Świętej mija szybko — tym bardziej warto spędzić go wśród najbliższych, bez&nbsp;gwaru obcych stolików i&nbsp;zerkania na&nbsp;zegarek. W&nbsp;<strong>Agroturystyce Giławy</strong> przyjmujemy <strong>tylko jedną rodzinę tego dnia</strong> (do&nbsp;ok.&nbsp;30 osób), oddając Wam całą przestrzeń parteru, zadaszony taras oraz rozległy ogród z&nbsp;widokiem na&nbsp;łąki i&nbsp;las.</p>
           <p>Dorośli mogą spokojnie porozmawiać przy kawie przy wspólnym stole lub&nbsp;na&nbsp;zadaszonym tarasie, dziadkowie mają ciszę i&nbsp;wygodę, a&nbsp;dzieci zamiast nudzić się przy stole mogą bezpiecznie wybiegać się na&nbsp;zielonej trawie z&nbsp;dala od&nbsp;ruchliwych ulic.</p>
           <p>Gotujemy z&nbsp;sercem i&nbsp;ze&nbsp;świeżych składników z&nbsp;naszego ekologicznego gospodarstwa — a&nbsp;jeśli część bliskich przyjeżdża z&nbsp;dalszych stron Polski, mogą zostać u&nbsp;nas na&nbsp;noc w&nbsp;trzech komfortowych apartamentach z&nbsp;łazienkami.</p>
           <div class="story-quote"><strong>Naturalny plener na&nbsp;pamiątkowe zdjęcia:</strong> zadaszony taras w&nbsp;kwiatach, słoneczny ogród, soczysta majowa łąka i&nbsp;ściana sosnowego lasu — rodzinną sesję komunijną zrobicie na&nbsp;miejscu, bez&nbsp;dodatkowych dojazdów.</div>
         </div>
         <div class="story-photos">
-          <img class="tall" src="assets/img/foto-05.webp" width="900" height="1600" alt="Dom Agroturystyki Giławy z zadaszonym tarasem, kwiatami i zielonym trawnikiem" loading="lazy">
-          <img class="sq" src="assets/img/foto-03.webp" width="1920" height="1440" alt="Jasna jadalnia ze świecznikami i kącikiem kawowym na przyjęcie komunijne" loading="lazy">
-          <img class="sq" src="assets/img/foto-08.webp" width="476" height="476" alt="Rozległa zielona łąka i sosnowy las tuż obok domu w Giławach" loading="lazy">
+          <img class="tall" src="assets/img/foto-05.webp" width="900" height="1600" alt="Dom Agroturystyki Giławy z zadaszonym tarasem, kwiatami i ogrodem na przyjęcie komunijne na Warmii" loading="lazy" decoding="async">
+          <img class="sq" src="assets/img/foto-03.webp" width="1920" height="1440" alt="Jasna sala jadalniana ze świecznikami i kącikiem kawowym na przyjęcie komunijne do 30 osób pod Olsztynem" loading="lazy" decoding="async">
+          <img class="sq" src="assets/img/foto-08.webp" width="476" height="476" alt="Rozległa zielona łąka i sosnowy las na rodzinną sesję komunijną w Giławach" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -482,7 +585,7 @@
       <div class="container">
         <div class="section-head">
           <p class="kicker">Jak wygląda przyjęcie komunijne w&nbsp;Giławach</p>
-          <h2>Spokojny rytm rodzinnego święta — od&nbsp;obiadu po&nbsp;wieczorną kawę</h2>
+          <h2>Spokojny rytm przyjęcia komunijnego — od&nbsp;obiadu po&nbsp;wieczorną kawę</h2>
           <p>Ustalamy scenariusz pod&nbsp;Waszą godzinę Mszy Świętej i&nbsp;potrzeby rodziny — bez&nbsp;sztywnego pośpiechu.</p>
         </div>
         <ol class="timeline">
@@ -515,7 +618,7 @@
       <div class="container">
         <div class="section-head">
           <p class="kicker">Dlaczego rodzice wybierają Giławy</p>
-          <h2>Wszystko, czego potrzeba na&nbsp;udane przyjęcie dla&nbsp;ok.&nbsp;30 osób</h2>
+          <h2>Lokal na&nbsp;komunię dla&nbsp;ok.&nbsp;30 osób — wszystko w&nbsp;jednym miejscu</h2>
           <p>Łączymy domowe ciepło i&nbsp;warmińską gościnność z&nbsp;wygodą miejsca przygotowanego specjalnie na&nbsp;kameralne uroczystości.</p>
         </div>
         <div class="benefits">
@@ -558,7 +661,7 @@
       <div class="container">
         <div class="section-head">
           <p class="kicker">Lokalizacja · Promień 30 km</p>
-          <h2>Blisko kościoła — szybki dojazd z&nbsp;całej okolicy</h2>
+          <h2>Sala na&nbsp;komunię blisko kościoła — dojazd z&nbsp;Olsztyna, Pasymia, Barczewa, Purdy i&nbsp;Szczytna</h2>
           <p>Agroturystyka Giławy (Giławy 75, gm.&nbsp;Purda) leży w&nbsp;zielonym sercu Warmii, na&nbsp;styku z&nbsp;Mazurami. Po&nbsp;Mszy Świętej goście dojadą do&nbsp;nas w&nbsp;kilkanaście minut — bez&nbsp;miejskich korków i&nbsp;szukania parkingu.</p>
         </div>
         <div class="loc-grid">
@@ -618,40 +721,40 @@
       <div class="container">
         <div class="section-head">
           <p class="kicker">Zobaczcie nasz dom i&nbsp;otoczenie</p>
-          <h2>Prawdziwe zdjęcia siedliska w&nbsp;Giławach</h2>
+          <h2>Zdjęcia sali, tarasu i&nbsp;ogrodu na&nbsp;przyjęcie komunijne w&nbsp;Giławach</h2>
           <p>Kliknij wybrane zdjęcie, aby obejrzeć je w&nbsp;powiększeniu.</p>
         </div>
         <div class="gallery">
           <figure class="g-card wide">
-            <img src="assets/img/foto-06.webp" width="1920" height="1440" alt="Dom Agroturystyka Giławy wśród zielonych łąk i lasu" loading="lazy">
+            <img src="assets/img/foto-06.webp" width="1920" height="1440" alt="Dom Agroturystyka Giławy wśród zielonych łąk i lasu — lokal na kameralną komunię w okolicach Olsztyna" loading="lazy" decoding="async">
             <figcaption>Dom w&nbsp;otoczeniu majowej zieleni — pełna prywatność i&nbsp;piękne tło do&nbsp;zdjęć</figcaption>
           </figure>
           <figure class="g-card crop-left">
-            <img src="assets/img/foto-05.webp" width="900" height="1600" alt="Zadaszony taras z kwiatami i wejście do domu" loading="lazy">
+            <img src="assets/img/foto-05.webp" width="900" height="1600" alt="Zadaszony taras w kwiatach na przyjęcie komunijne w Agroturystyce Giławy" loading="lazy" decoding="async">
             <figcaption>Zadaszony taras w&nbsp;kwiatach — osłona przed słońcem i&nbsp;wiosennym deszczem</figcaption>
           </figure>
           <figure class="g-card">
-            <img src="assets/img/foto-03.webp" width="1920" height="1440" alt="Jasna jadalnia ze stołami, świecznikami i kącikiem kawowym" loading="lazy">
+            <img src="assets/img/foto-03.webp" width="1920" height="1440" alt="Jasna sala jadalniana na komunię do 30 osób ze stołami, świecznikami i kącikiem kawowym" loading="lazy" decoding="async">
             <figcaption>Jasna jadalnia ze&nbsp;świecznikami i&nbsp;kącikiem kawowym na&nbsp;ok.&nbsp;30 osób</figcaption>
           </figure>
           <figure class="g-card">
-            <img src="assets/img/sylwester/lazienka.webp" width="576" height="768" alt="Nowoczesna prywatna łazienka z prysznicem i oknem dachowym" loading="lazy">
+            <img src="assets/img/sylwester/lazienka.webp" width="576" height="768" alt="Nowoczesna prywatna łazienka z prysznicem w apartamencie dla gości komunijnych" loading="lazy" decoding="async">
             <figcaption>Nowoczesne prywatne łazienki w&nbsp;apartamentach dla&nbsp;gości z&nbsp;daleka</figcaption>
           </figure>
           <figure class="g-card">
-            <img src="assets/img/foto-08.webp" width="476" height="476" alt="Widok na zieloną łąkę i sosnowy las w Giławach" loading="lazy">
+            <img src="assets/img/foto-08.webp" width="476" height="476" alt="Widok na zieloną łąkę i sosnowy las w Giławach — plener na zdjęcia komunijne" loading="lazy" decoding="async">
             <figcaption>Łąki i&nbsp;sosnowy las za&nbsp;oknem — cisza zamiast miejskiego zgiełku</figcaption>
           </figure>
           <figure class="g-card">
-            <img src="assets/img/foto-01.webp" width="1920" height="1440" alt="Jasna sypialnia w apartamencie dla gości z daleka" loading="lazy">
+            <img src="assets/img/foto-01.webp" width="1920" height="1440" alt="Jasna sypialnia w apartamencie na noclegi po przyjęciu komunijnym" loading="lazy" decoding="async">
             <figcaption>Opcjonalne noclegi dla&nbsp;gości z&nbsp;daleka — 3 apartamenty (do&nbsp;14 miejsc)</figcaption>
           </figure>
           <figure class="g-card">
-            <img src="assets/img/foto-09.webp" width="476" height="476" alt="Sypialnia z balkonem i widokiem na ogród" loading="lazy">
+            <img src="assets/img/foto-09.webp" width="476" height="476" alt="Sypialnia z balkonem i widokiem na ogród w Agroturystyce Giławy" loading="lazy" decoding="async">
             <figcaption>Przytulne pokoje z&nbsp;wyjściem na&nbsp;balkon i&nbsp;prywatnymi łazienkami</figcaption>
           </figure>
           <figure class="g-card">
-            <img src="assets/img/foto-04.webp" width="1440" height="1920" alt="Wnętrze parteru z kominkiem i drewnianymi schodami" loading="lazy">
+            <img src="assets/img/foto-04.webp" width="1440" height="1920" alt="Wnętrze parteru z kominkiem i drewnianymi schodami — sala na komunię na Warmii" loading="lazy" decoding="async">
             <figcaption>Ciepłe, jasne wnętrza parteru z&nbsp;kominkiem na&nbsp;chłodniejszy majowy wieczór</figcaption>
           </figure>
         </div>
@@ -696,7 +799,7 @@
       <div class="container">
         <div class="section-head">
           <p class="kicker">Oferta komunijna</p>
-          <h2>Jedna rodzina, jeden dzień — przyjęcie szyte na&nbsp;miarę</h2>
+          <h2>Agroturystyka na&nbsp;komunię 2027 / 2028 — przyjęcie szyte na&nbsp;miarę</h2>
           <p>Każde przyjęcie komunijne ustalamy bezpośrednio z&nbsp;rodzicami — tak, aby pasowało do&nbsp;liczby gości, wieku dzieci i&nbsp;Waszego budżetu.</p>
         </div>
         <div class="offer">
@@ -824,7 +927,7 @@
       <div class="container">
         <div class="section-head">
           <p class="kicker">Najczęstsze pytania rodziców</p>
-          <h2>Wszystko, co&nbsp;warto wiedzieć przed rezerwacją komunii</h2>
+          <h2>Pytania o&nbsp;organizację, menu i&nbsp;terminy komunii w&nbsp;Giławach</h2>
         </div>
         <div class="faq">
           <details>
@@ -855,6 +958,10 @@
             <summary>Gdzie dokładnie leżą Giławy i&nbsp;czy można wcześniej obejrzeć obiekt?</summary>
             <p>Adres to&nbsp;<strong>Giławy 75, 11-030 Giławy (gm.&nbsp;Purda)</strong> — ok.&nbsp;10 min z&nbsp;Pasymia, 15 min z&nbsp;Purdy i&nbsp;Klebarka, 15–20 min z&nbsp;Barczewa, 20 min z&nbsp;Dźwierzut, 20–25 min ze&nbsp;Szczytna i&nbsp;ok.&nbsp;25 min z&nbsp;Olsztyna (Pieczewo/Jaroty). Zapraszamy wcześniej na&nbsp;kawę i&nbsp;obejrzenie miejsca — wystarczy zadzwonić pod&nbsp;<a href="tel:+48512720750" style="color:var(--forest);font-weight:700;text-decoration:underline">+48 512 720 750</a>.</p>
           </details>
+          <details>
+            <summary>Kiedy najlepiej rezerwować salę na&nbsp;komunię 2027/2028 i&nbsp;jak wygląda wycena?</summary>
+            <p>Organizujemy <strong>tylko jedno przyjęcie komunijne dziennie</strong>, dlatego wolne niedziele majowe warto sprawdzać z&nbsp;wyprzedzeniem. Wycenę przygotowujemy indywidualnie od&nbsp;osoby w&nbsp;zależności od&nbsp;wybranego wariantu menu, liczby dorosłych i&nbsp;dzieci oraz ewentualnych noclegów.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -876,7 +983,7 @@
   <footer class="site">
     <div class="container">
       <div>© Agroturystyka&nbsp;Giławy · Giławy 75, 11-030 Giławy (gm.&nbsp;Purda, Warmia)</div>
-      <div><a href="index.html">Strona główna gospodarstwa</a> · <a href="tel:+48512720750">+48 512 720 750</a> · <a href="mailto:agroturystyka@gilawy.pl">agroturystyka@gilawy.pl</a></div>
+      <div><a href="index.html">Strona główna</a> · <a href="sylwester.html">Sylwester na&nbsp;Warmii</a> · <a href="tel:+48512720750">+48 512 720 750</a> · <a href="mailto:agroturystyka@gilawy.pl">agroturystyka@gilawy.pl</a></div>
     </div>
   </footer>
 

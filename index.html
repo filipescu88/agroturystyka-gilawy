@@ -51,20 +51,24 @@
   <meta name="description" content="Agroturystyka Giławy — wypoczynek w Giławach na Warmii. Trzy nowoczesne apartamenty dla 14 osób na ekologicznym gospodarstwie. Jeziora, las, cisza i wypoczynek z dala od miasta.">
   <meta name="keywords" content="Agroturystyka Giławy, nocleg Warmia, Giławy noclegi, agroturystyka Warmia i Mazury, apartamenty Giławy, wypoczynek nad jeziorem">
   <meta name="author" content="Agroturystyka Giławy">
+  <meta name="robots" content="index, follow, max-image-preview:large">
 
   <!-- Open Graph -->
+  <meta property="og:site_name" content="Agroturystyka Giławy">
   <meta property="og:title" content="Agroturystyka Giławy — Wypoczynek na Warmii">
-  <meta property="og:description" content="Trzy apartamenty dla 14 osób na ekologicznym gospodarstwie na Warmii. Jeziora, las, cisza.">
+  <meta property="og:description" content="Trzy apartamenty dla 14 osób na ekologicznym gospodarstwie na Warmii. Jeziora, las, cisza oraz kameralne przyjęcia komunijne do 30 osób.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gilawy.pl/">
   <meta property="og:image" content="https://gilawy.pl/assets/img/foto-06.webp">
+  <meta property="og:image:alt" content="Agroturystyka Giławy — dom w otoczeniu warmińskich łąk i lasu">
   <meta property="og:locale" content="pl_PL">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="canonical" href="https://gilawy.pl/">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#f7f1e7">
-  <link rel="preload" as="image" href="assets/img/foto-06.webp">
+  <link rel="preload" as="image" href="assets/img/foto-06.webp" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,34 +80,53 @@
   </noscript>
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Schema.org: lokalny biznes / nocleg -->
+  <!-- Schema.org: lokalny biznes / nocleg / imprezy okolicznościowe -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "name": "Agroturystyka Giławy",
-    "description": "Agroturystyka na ekologicznym gospodarstwie rolnym. Trzy apartamenty dla 14 osób, jeziora i lasy Warmii.",
-    "image": "https://gilawy.pl/assets/img/foto-06.webp",
-    "url": "https://gilawy.pl/",
-    "sameAs": ["https://www.booking.com/hotel/pl/agroturystyka-gilawy.pl.html"],
-    "telephone": "+48512720750",
-    "email": "agroturystyka@gilawy.pl",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Giławy 75",
-      "postalCode": "11-030",
-      "addressLocality": "Giławy",
-      "addressRegion": "warmińsko-mazurskie",
-      "addressCountry": "PL"
-    },
-    "petsAllowed": true,
-    "numberOfRooms": 3,
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "9.4",
-      "bestRating": "10",
-      "reviewCount": "20"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://gilawy.pl/#website",
+        "url": "https://gilawy.pl/",
+        "name": "Agroturystyka Giławy",
+        "inLanguage": "pl-PL"
+      },
+      {
+        "@type": ["LodgingBusiness", "EventVenue"],
+        "@id": "https://gilawy.pl/#venue",
+        "name": "Agroturystyka Giławy",
+        "description": "Agroturystyka na ekologicznym gospodarstwie rolnym w Giławach na Warmii (gm. Purda). Trzy apartamenty dla 14 osób oraz kameralne przyjęcia komunijne do 30 osób na wyłączność.",
+        "image": "https://gilawy.pl/assets/img/foto-06.webp",
+        "url": "https://gilawy.pl/",
+        "sameAs": ["https://www.booking.com/hotel/pl/agroturystyka-gilawy.pl.html"],
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=53.72653514861423%2C20.7880292513791",
+        "telephone": "+48512720750",
+        "email": "agroturystyka@gilawy.pl",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Giławy 75",
+          "postalCode": "11-030",
+          "addressLocality": "Giławy",
+          "addressRegion": "warmińsko-mazurskie",
+          "addressCountry": "PL"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.726535,
+          "longitude": 20.788029
+        },
+        "petsAllowed": true,
+        "numberOfRooms": 3,
+        "maximumAttendeeCapacity": 30,
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "9.4",
+          "bestRating": "10",
+          "reviewCount": "20"
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -460,6 +483,21 @@
           <a href="#kontakt" class="btn btn-ghost btn-block">Zapytaj o ofertę</a>
         </div>
       </div>
+
+      <div class="special-offers" aria-label="Oferty specjalne na wyłączność">
+        <article class="special-card">
+          <p class="kicker">Imprezy rodzinne · okolice Olsztyna</p>
+          <h3>Kameralne przyjęcia komunijne (do 30 osób)</h3>
+          <p>Organizujemy przyjęcia komunijne na wyłączność dla rodzin z Olsztyna, Pasymia, Purdy, Barczewa, Dźwierzut i Szczytna. Jasna sala jadalniana, zadaszony taras, ogród, domowa kuchnia i opcja noclegów.</p>
+          <a href="komunia.html" class="btn btn-primary">Zobacz ofertę: sala na komunię pod Olsztynem →</a>
+        </article>
+        <article class="special-card">
+          <p class="kicker">Oferta sezonowa · cały dom</p>
+          <h3>Sylwester na Warmii i Mazurach (do 14 osób)</h3>
+          <p>Wynajmij całe siedlisko dla paczki znajomych lub rodziny: 3 apartamenty z łazienkami, salon z kominkiem, duża jadalnia oraz cisza wśród warmińskich lasów.</p>
+          <a href="sylwester.html" class="btn btn-ghost">Zobacz ofertę na Sylwestra →</a>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -540,6 +578,8 @@
         <a href="#noclegi">Noclegi</a>
         <a href="#galeria">Galeria</a>
         <a href="#cennik">Cennik</a>
+        <a href="komunia.html">Przyjęcia komunijne</a>
+        <a href="sylwester.html">Sylwester na Warmii</a>
         <a href="#kontakt">Kontakt</a>
       </div>
       <div class="footer-contact">

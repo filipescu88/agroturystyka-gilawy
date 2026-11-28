@@ -59,11 +59,16 @@
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#121a2b">
-  <link rel="preload" as="image" href="assets/img/sylwester/hero.webp">
+  <link rel="preload" as="image" href="assets/img/sylwester/hero.webp" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap">
+  </noscript>
 
   <script type="application/ld+json">
   {
@@ -767,7 +772,7 @@
   <footer class="site">
     <div class="container">
       <div>© Agroturystyka&nbsp;Giławy · Giławy 75, 11-030 Giławy (gm. Purda, Warmia)</div>
-      <div><a href="index.html">Strona główna gospodarstwa</a> · <a href="tel:+48512720750">+48 512 720 750</a> · <a href="mailto:agroturystyka@gilawy.pl">agroturystyka@gilawy.pl</a></div>
+      <div><a href="index.html">Strona główna</a> · <a href="komunia.html">Przyjęcia komunijne</a> · <a href="tel:+48512720750">+48 512 720 750</a> · <a href="mailto:agroturystyka@gilawy.pl">agroturystyka@gilawy.pl</a></div>
     </div>
   </footer>
 
